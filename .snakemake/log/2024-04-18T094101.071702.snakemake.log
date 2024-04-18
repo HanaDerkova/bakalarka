@@ -1,0 +1,5 @@
+Building DAG of jobs...
+ChildIOException:
+File/directory is a child to another output:
+/home/hade/Desktop/bc_thesis/10_output
+/home/hade/Desktop/bc_thesis/10_output/cross_entropy.npy

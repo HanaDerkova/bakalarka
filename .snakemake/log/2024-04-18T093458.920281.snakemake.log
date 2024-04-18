@@ -1,0 +1,3 @@
+KeyError in line 29 of /home/hade/Desktop/bc_thesis/Snakefile:
+"'{setup}'"
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 29, in <module>

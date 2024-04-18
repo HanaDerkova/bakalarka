@@ -1,0 +1,3 @@
+KeyError in line 30 of /home/hade/Desktop/bc_thesis/Snakefile:
+'{order}'
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 30, in <module>
