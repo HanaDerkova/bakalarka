@@ -15,15 +15,14 @@ parser.add_argument('-number_of_states','-ns', type=int, help='Number of states 
 # parser.add_argument('--options','-opt', default=None , help='options for optimizer')
 parser.add_argument('--threads', '-tr ',default=1, type=int, help='number of threads for optimization')
 parser.add_argument('--fit', type=str, default='i', choices=['g', 'd', 'i'], help='fit gaps / intervals or load distribution from .npy file, defalut intervals')
-parser.add_argument('--percent_visualize', '-p_v', defalut=100 ,type=int, help='percent of the data to be visualized, when hadling large bed file')
-parser.add_argument('--sample', '-s', type=int, defalut = None, hep='sample to preform training on, if bed file is too big to speed up training')
+parser.add_argument('--percent_visualize', '-p_v', default=100 ,type=int, help='percent of the data to be visualized, when hadling large bed file')
+parser.add_argument('--sample', '-s', type=int, default=None, help='sample to preform training on, if bed file is too big to speed up training')
 
 # Add optional parameters for L-BFGS-B optimization
 parser.add_argument('--ftol', type=float, default=1e-5, help='tolerance for convergence')
 parser.add_argument('--gtol', type=float, default=1e-5, help='gradient norm tolerance')
 parser.add_argument('--max_iter', type=int, default=15000, help='maximum number of iterations')
 parser.add_argument('--max_cor', type=int, default=10, help='maximum number of corrections')
-
 
 
 args = parser.parse_args()
@@ -39,10 +38,14 @@ if args.percent_visualize < 0:
 
 if args.fit == 'g' :
     data = calculate_gap_lengths(args.input_file)
-elif args.fin == 'i':
+elif args.fit == 'i':
     data = extract_feature_lengths(args.input_file)
 elif args.fit == "d":
     data = np.load(args.input_file)
+
+#TODO : use the sample data for training then
+if args.sample != None:
+    sample_data = np.random.choice(data, size=args.sample, replace=False)
 
 
 if args.architecture == "full" :
@@ -50,7 +53,7 @@ if args.architecture == "full" :
 elif args.architecture == "combined":
     bounds = [(-15, 15) for _ in range((args.number_of_states - 1) * 2 )]
 elif args.architecture == "chain" or args.architecture == "escape_chain" :
-    bounds = [(-2, 2) for _ in range(args.number_of_states - 1)]
+    bounds = [(-15, 15) for _ in range(args.number_of_states - 1)]
 
 options = {'maxfun': 60000,
      'ftol': args.ftol,
