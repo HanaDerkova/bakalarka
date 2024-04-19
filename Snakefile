@@ -9,23 +9,18 @@ experiments_file = config["experiments_file"]
 data_dir = config["data_file"]
 experiments = pd.read_csv(experiments_file, sep=",")
 
-def help(wildcards):
-    print(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])
-    print(json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0]))
 
 rule train_model:
    input: inputt=lambda w: f"{data_dir}/" + experiments.loc[experiments["order"] == int(w.id), "input_file"].values[0]
    params:
        architecture = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "architecture"].values[0],
        number_of_states = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "number_of_states"].values[0],
-    #    a = lambda w : help(w),
        params_json = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0]),
        #number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["id"] == wildcards.id, "params_json"].values[0])["number_of_tries"],
        ftol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["ftol"],
        gtol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["gtol"],
        maxiter = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxiter"],
        max_cor = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxcor"],
-       #fit = lambda wildcards: json.loads(experiments.loc[experiments["id"] == wildcards.id, "params_json"].values[0])["fit"]
        fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0]
    
    
@@ -46,6 +41,8 @@ rule train_model:
         f""") 2>&1 | tail -n1 > {{output.metrics}}"""
 
 
+
+#TODO: check wather they concatenate correclty 
 rule collect_statistics:
    input:
        cross_entropies=expand(f"{output_dir}/{{id}}/cross_entropy.csv", id=experiments["order"].values),
