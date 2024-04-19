@@ -8,6 +8,7 @@ output_dir = config.get("output_directory", "output")
 experiments_file = config["experiments_file"]
 data_dir = config["data_file"]
 experiments = pd.read_csv(experiments_file, sep=",")
+default_target = f"{output_dir}/statistics.tsv"
 
 
 rule train_model:
@@ -15,7 +16,9 @@ rule train_model:
    params:
        architecture = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "architecture"].values[0],
        number_of_states = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "number_of_states"].values[0],
-       params_json = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0]),
+       #number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["number_of_tries"],
+       #sample_size = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["sample_size"],
+       #percent_to_visualize = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["percent_to_visualize"],
        #number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["id"] == wildcards.id, "params_json"].values[0])["number_of_tries"],
        ftol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["ftol"],
        gtol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["gtol"],
@@ -24,7 +27,7 @@ rule train_model:
        fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0]
    
    
-#    threads: lambda wildcards: json.loads(experiments.loc[experiments["id"] == wildcards.id, "params_json"].values[0])["threads"]
+   threads: lambda wildcards: experiments.loc[experiments["id"] == wildcards.id, "thread"].values[0]
 
    output:
        model=f"{output_dir}/{{id}}/trained_model.txt",
@@ -63,19 +66,9 @@ rule collect_statistics:
        cross_entropies.to_csv(output[0], sep="\t", index=False)
       
       
-      
-# import argparse
-#
-# parser = argparse.ArgumentParser()
-# parser.add_argument('--inputs', nargs='+', help='List of input arguments')
-# args = parser.parse_args()
-#
-# input_list = args.inputs
-# print("Input list:", input_list)
-
 rule all:
-   #default_target: True
-   input: f"{output_dir}/statistics.tsv" , expand(f"{output_dir}/{{id}}/trained_model.txt", id=experiments["order"].values),
+   input: f"{output_dir}/statistics.tsv"
+   #, expand(f"{output_dir}/{{id}}/trained_model.txt", id=experiments["order"].values),
 
 
 

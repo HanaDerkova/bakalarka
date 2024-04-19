@@ -1,41 +1,63 @@
-order	cross_entropy	input_file	output_file	architecture	number_of_states	threads	fit	time	memory
-1	4.002803775605155	gaussian.npy	1	chain	2	1	d	1.38	171268
-2	3.418862297232668	gaussian.npy	2	chain	4	1	d	3.87	170932
-3	3.186059043162986	gaussian.npy	3	chain	6	1	d	3.91	171700
-4	3.073834036034422	gaussian.npy	4	chain	8	1	d	5.47	171340
-5	3.265356904518748	gaussian.npy	5	chain	10	1	d	4.31	171340
-6	3.7562522363930704	gaussian.npy	6	chain	12	1	d	4.95	171492
-7	4.859917670980636	gaussian.npy	7	chain	14	1	d	4.89	171436
-8	7.412042558946973	gaussian.npy	8	chain	16	1	d	3.69	171512
-9	11.571883468181197	gaussian.npy	9	chain	18	1	d	4.46	171408
-10	17.002792726150957	gaussian.npy	10	chain	20	1	d	4.92	171184
-11	24.354650736874223	gaussian.npy	11	chain	22	1	d	4.53	171892
-12	30.037424747640856	gaussian.npy	12	chain	24	1	d	5.32	171576
-13	36.30441994364337	gaussian.npy	13	chain	26	1	d	4.24	171332
-14	41.36446545714656	gaussian.npy	14	chain	28	1	d	5.86	171100
-15	44.18082436423641	gaussian.npy	15	chain	30	1	d	6.26	171104
-16	46.05170185988091	gaussian.npy	1	escape_chain	2	1	d	7.15	171676
-17	46.05170185988091	gaussian.npy	2	escape_chain	4	1	d	4.67	171712
-18	46.05170185988091	gaussian.npy	3	escape_chain	6	1	d	6.93	171508
-19	45.87123325725074	gaussian.npy	4	escape_chain	8	1	d	6.41	171440
-20	45.573922854541934	gaussian.npy	5	escape_chain	10	1	d	6.32	171284
-21	44.80635743171549	gaussian.npy	6	escape_chain	12	1	d	5.35	171256
-22	43.30529027469132	gaussian.npy	7	escape_chain	14	1	d	8.92	171568
-23	39.68418037646663	gaussian.npy	8	escape_chain	16	1	d	11.37	171468
-24	33.97647738292345	gaussian.npy	9	escape_chain	18	1	d	11.17	171240
-25	28.339305812605502	gaussian.npy	10	escape_chain	20	1	d	11.96	171156
-26	21.05626758821744	gaussian.npy	11	escape_chain	22	1	d	16.07	171704
-27	15.235975461281267	gaussian.npy	12	escape_chain	24	1	d	12.28	171224
-28	9.35000763361156	gaussian.npy	13	escape_chain	26	1	d	18.33	171244
-29	6.670300569858145	gaussian.npy	14	escape_chain	28	1	d	23.31	171580
-30	4.258106994011248	gaussian.npy	15	escape_chain	30	1	d	25.33	171588
-31	3.2812066683481422	gaussian.npy	5	escape_chain	32	1	d	130.80	170796
-32	3.12309260819632	gaussian.npy	6	escape_chain	34	1	d	117.48	171868
-33	2.96527567802721	gaussian.npy	7	escape_chain	36	1	d	87.67	171280
-34	2.965258225676738	gaussian.npy	8	escape_chain	38	1	d	166.94	171188
-35	2.965255597793924	gaussian.npy	9	escape_chain	40	1	d	183.35	171644
-36	2.965333018391028	gaussian.npy	10	escape_chain	42	1	d	179.56	171064
-37	2.965269851505956	gaussian.npy	11	escape_chain	44	1	d	224.48	171788
-38	2.965274563250984	gaussian.npy	12	escape_chain	46	1	d	288.49	171708
-39	2.9653060064979444	gaussian.npy	13	escape_chain	48	1	d	240.00	171588
-40	2.965232242515749	gaussian.npy	14	escape_chain	50	1	d	289.20	171284
+order	cross_entropy	input_file	architecture	number_of_states	threads	fit	params_json	time	memory
+1	4.002803775605156	gaussian.npy	chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	1.39	170356
+2	3.418862297232668	gaussian.npy	chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	3.87	170932
+3	3.186059043162986	gaussian.npy	chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	3.91	171700
+4	3.073834036034422	gaussian.npy	chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	5.47	171340
+5	3.2653174860936987	gaussian.npy	chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.31	171340
+6	3.7562522363930704	gaussian.npy	chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.95	171492
+7	4.859917670980636	gaussian.npy	chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.89	171436
+8	7.412042558946973	gaussian.npy	chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	3.69	171512
+9	11.571883468181197	gaussian.npy	chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.46	171408
+10	17.002792726335837	gaussian.npy	chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.92	171184
+11	24.354650736874223	gaussian.npy	chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.53	171892
+12	30.037424747640856	gaussian.npy	chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	5.32	171576
+13	36.30441994364337	gaussian.npy	chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.24	171332
+14	41.36446545714656	gaussian.npy	chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	5.86	171100
+15	44.18082436423641	gaussian.npy	chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.26	171104
+16	46.05170185988091	gaussian.npy	escape_chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	7.15	171676
+17	46.05170185988091	gaussian.npy	escape_chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.67	171712
+18	46.05170185988091	gaussian.npy	escape_chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.93	171508
+19	45.87123325725074	gaussian.npy	escape_chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.41	171440
+20	45.573922854541934	gaussian.npy	escape_chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.32	171284
+21	44.80635743171549	gaussian.npy	escape_chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	5.35	171256
+22	43.30529027469132	gaussian.npy	escape_chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	8.92	171568
+23	39.68418037646663	gaussian.npy	escape_chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	11.37	171468
+24	33.97647738292345	gaussian.npy	escape_chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	11.17	171240
+25	28.339305812605502	gaussian.npy	escape_chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	11.96	171156
+26	21.05626758821744	gaussian.npy	escape_chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	16.07	171704
+27	15.235975461281267	gaussian.npy	escape_chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	12.28	171224
+28	9.35000763361156	gaussian.npy	escape_chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	18.33	171244
+29	6.670300569858145	gaussian.npy	escape_chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	23.31	171580
+30	4.258106994011248	gaussian.npy	escape_chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	25.33	171588
+31	3.2812066683481422	gaussian.npy	escape_chain	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	130.80	170796
+32	3.12309260819632	gaussian.npy	escape_chain	34	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	117.48	171868
+33	2.96527567802721	gaussian.npy	escape_chain	36	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	87.67	171280
+34	2.965258225676738	gaussian.npy	escape_chain	38	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	166.94	171188
+35	2.965255597793924	gaussian.npy	escape_chain	40	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	183.35	171644
+36	2.965333018391028	gaussian.npy	escape_chain	42	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	179.56	171064
+37	2.965269851505956	gaussian.npy	escape_chain	44	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	224.48	171788
+38	2.965274563250984	gaussian.npy	escape_chain	46	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	288.49	171708
+39	2.9653060064979444	gaussian.npy	escape_chain	48	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	240.00	171588
+40	2.965232242515749	gaussian.npy	escape_chain	50	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	289.20	171284
+41	4.002920550090664	gaussian.npy	combined	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	7.37	169328
+42	3.898212000411709	gaussian.npy	combined	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	9.01	170264
+43	3.4744275784931573	gaussian.npy	combined	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	10.38	170252
+44	3.2393976108627194	gaussian.npy	combined	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	24.29	170364
+45	3.0739129781711947	gaussian.npy	combined	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	33.75	170056
+46	3.0189134765590477	gaussian.npy	combined	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	33.35	169816
+47	3.01042851494413	gaussian.npy	combined	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	37.35	169568
+48	3.000368673095532	gaussian.npy	combined	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	56.12	170128
+49	3.005548147514839	gaussian.npy	combined	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	69.78	169804
+50	2.9972684060816284	gaussian.npy	combined	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	37.90	170484
+51	2.9954912155662847	gaussian.npy	combined	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	75.32	170164
+52	2.9910819269016247	gaussian.npy	combined	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	79.45	170032
+53	2.989843999506543	gaussian.npy	combined	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	116.27	168928
+54	2.99343591169184	gaussian.npy	combined	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	144.06	169736
+55	2.9924679317847422	gaussian.npy	combined	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	445.08	169480
+56	2.9888475730967063	gaussian.npy	combined	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	348.97	169684
+57	2.9930502536028207	gaussian.npy	combined	34	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	432.72	169088
+58	2.992147523278802	gaussian.npy	combined	36	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	362.36	169320
+59	3.0038626678656297	gaussian.npy	combined	38	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	372.01	170112
+60	2.995627970569588	gaussian.npy	combined	40	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	423.72	170916
+61	2.991539848074907	gaussian.npy	combined	42	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	332.18	169492
+62	2.9863901668477557	gaussian.npy	combined	44	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	139.13	170000
