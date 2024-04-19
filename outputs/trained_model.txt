@@ -508,3 +508,21 @@ Parameters:
 -15.0
 -15.0
 -15.0
+Architecture: chain
+Number of States: 4
+Parameters:
+1.7181062905786035
+1.6735547643686077
+1.9049318562556201
+Architecture: chain
+Number of States: 4
+Parameters:
+1.7717996092257378
+1.7717787691018714
+1.7717834827997525
+Architecture: chain
+Number of States: 4
+Parameters:
+1.7717841136911339
+1.7717840225661956
+1.7717862634212231

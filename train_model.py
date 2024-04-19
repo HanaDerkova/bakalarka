@@ -13,28 +13,38 @@ parser.add_argument('input_file', type=str, help='path to input bed file')
 parser.add_argument('-o', dest='output_dir', type=str, help='path to output directory')
 parser.add_argument('-architecture', type=str ,help='specify architecture for training')
 parser.add_argument('-number_of_states','-ns', type=int, help='Number of states for Markov chain')
-# parser.add_argument('--options','-opt', default=None , help='options for optimizer')
+#-------------------------------------------------------------------------------------------
 parser.add_argument('--threads', '-tr ',default=1, type=int, help='number of threads for optimization')
 parser.add_argument('--fit', type=str, default='i', choices=['g', 'd', 'i'], help='fit gaps / intervals or load distribution from .npy file, defalut intervals')
+
+parser.add_argument("--training_opt", nargs='+', type=int, help="number_of_tires, sample_size, percent_to_vizualize")
+
 parser.add_argument('--percent_visualize', '-p_v', default=100 ,type=int, help='percent of the data to be visualized, when hadling large bed file')
 parser.add_argument('--sample', '-s', type=int, default=None, help='sample to preform training on, if bed file is too big to speed up training')
 
 # Add optional parameters for L-BFGS-B optimization
-parser.add_argument('--ftol', type=float, default=1e-5, help='tolerance for convergence')
-parser.add_argument('--gtol', type=float, default=1e-5, help='gradient norm tolerance')
-parser.add_argument('--max_iter', type=int, default=15000, help='maximum number of iterations')
-parser.add_argument('--max_cor', type=int, default=10, help='maximum number of corrections')
+parser.add_argument('--opt_options', nargs='+', type=float, help='List of input arguments: ftol gtol maxiter maxcor, mind that maxiter and maxcor must be integers')
 
 
 args = parser.parse_args()
 
 print(args)
 
+if args.training_opt is not None:
+    if len(args.training_opt) != 3:
+        sys.exit("Error : provide exactly 3 values in order number_of_tires, sample_size, percent_to_vizualize") 
+    number_of_tries, sample_size, percent_visualize = args.training_opt
+
+    if percent_visualize < 0:
+        sys.exit("Error: Percent to visualize cannot be negative.")
+    if sample_size < 0:
+        sys.exit("Error: Sample size cannot be negative.")
+    if number_of_tries < 0:
+        sys.exit("Error: NUmber of tries cannot be negative.")
+
+
 if args.threads < 1:
     sys.exit("Error: Number of threads must be at least 1.")
-
-if args.percent_visualize < 0:
-    sys.exit("Error: Percent to visualize cannot be negative.")
 
 
 if args.fit == 'g' :
@@ -56,11 +66,20 @@ elif args.architecture == "combined":
 elif args.architecture == "chain" or args.architecture == "escape_chain" :
     bounds = [(-15, 15) for _ in range(args.number_of_states - 1)]
 
-options = {'maxfun': 60000,
-     'ftol': args.ftol,
-     'gtol': args.gtol,
-     'max_iter': args.max_iter,
-     'max_cor': args.max_cor}  # Add optional parameters to the options dictionary
+
+options = {'maxfun': 60000}
+
+if args.opt_options is not None:
+    if len(args.opt_options) != 4:
+        parser.error("Please provide exactly four input values: ftol gtol max_iter max_cor")
+    ftol, gtol, max_iter, max_cor = args.opt_options
+    print("I m running w this options:")
+    options = {'maxfun': 60000,
+     'ftol': ftol,
+     'gtol': gtol,
+     'maxiter': int(max_iter),
+     'maxcor': int(max_cor)}
+    print(options)
 
 
 args_list = [(args.number_of_states, data, bounds, options, args.architecture )] * args.threads
