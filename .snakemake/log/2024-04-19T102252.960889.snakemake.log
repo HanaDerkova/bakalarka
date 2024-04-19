@@ -1,0 +1,2 @@
+SyntaxError in line 77 of /home/hade/Desktop/bc_thesis/Snakefile:
+Unexpected keyword default_target in rule definition (Snakefile, line 77)

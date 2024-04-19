@@ -1,0 +1,3 @@
+Building DAG of jobs...
+MissingRuleException:
+No rule to produce outputs/4/trained_model.txt (if you use input functions make sure that they don't raise unexpected exceptions).

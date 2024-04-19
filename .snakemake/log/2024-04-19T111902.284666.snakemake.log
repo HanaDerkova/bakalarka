@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	try_me
+	1
+
+[Fri Apr 19 11:19:02 2024]
+rule try_me:
+    output: outputs/4
+    jobid: 0
+    wildcards: id=4
+
+[Fri Apr 19 11:19:02 2024]
+Error in rule try_me:
+    jobid: 0
+    output: outputs/4
+    shell:
+         touch outputs/<built-in function id> 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-19T111902.284666.snakemake.log

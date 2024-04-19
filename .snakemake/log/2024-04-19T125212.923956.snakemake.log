@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 39 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing input files for rule train_model:
+data/2/gaussian.npy

@@ -1,0 +1,8 @@
+FileNotFoundError in line 10 of /home/hade/Desktop/bc_thesis/Snakefile:
+[Errno 2] No such file or directory: 'experiments.csv'
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 10, in <module>
+  File "/home/hade/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+  File "/home/hade/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+  File "/home/hade/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+  File "/home/hade/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+  File "/home/hade/.local/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle

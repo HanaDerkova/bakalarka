@@ -1,0 +1,17 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	try_me
+	1
+
+[Fri Apr 19 11:15:14 2024]
+rule try_me:
+    output: outputs/4
+    jobid: 0
+    wildcards: id=4
+
+RuleException in line 16 of /home/hade/Desktop/bc_thesis/Snakefile:
+NameError: The name 'id' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

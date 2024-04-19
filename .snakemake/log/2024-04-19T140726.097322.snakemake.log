@@ -1,0 +1,148 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	collect_statistics
+	8	train_model
+	9
+
+[Fri Apr 19 14:07:26 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/39/trained_model.txt, outputs/39/cross_entropy.csv, outputs/39/data_vs_training.svg, outputs/39/metrics.txt
+    jobid: 39
+    wildcards: id=39
+
+
+[Fri Apr 19 14:07:26 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/40/trained_model.txt, outputs/40/cross_entropy.csv, outputs/40/data_vs_training.svg, outputs/40/metrics.txt
+    jobid: 40
+    wildcards: id=40
+
+
+[Fri Apr 19 14:07:26 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/37/trained_model.txt, outputs/37/cross_entropy.csv, outputs/37/data_vs_training.svg, outputs/37/metrics.txt
+    jobid: 37
+    wildcards: id=37
+
+
+[Fri Apr 19 14:07:26 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/36/trained_model.txt, outputs/36/cross_entropy.csv, outputs/36/data_vs_training.svg, outputs/36/metrics.txt
+    jobid: 36
+    wildcards: id=36
+
+
+[Fri Apr 19 14:07:26 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/34/trained_model.txt, outputs/34/cross_entropy.csv, outputs/34/data_vs_training.svg, outputs/34/metrics.txt
+    jobid: 34
+    wildcards: id=34
+
+
+[Fri Apr 19 14:07:26 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/38/trained_model.txt, outputs/38/cross_entropy.csv, outputs/38/data_vs_training.svg, outputs/38/metrics.txt
+    jobid: 38
+    wildcards: id=38
+
+
+[Fri Apr 19 14:07:26 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/1/trained_model.txt, outputs/1/cross_entropy.csv, outputs/1/data_vs_training.svg, outputs/1/metrics.txt
+    jobid: 1
+    wildcards: id=1
+
+
+[Fri Apr 19 14:07:26 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/35/trained_model.txt, outputs/35/cross_entropy.csv, outputs/35/data_vs_training.svg, outputs/35/metrics.txt
+    jobid: 35
+    wildcards: id=35
+
+[Fri Apr 19 14:07:31 2024]
+Finished job 1.
+1 of 9 steps (11%) done
+Terminating processes on user request, this might take some time.
+[Fri Apr 19 14:07:37 2024]
+Error in rule train_model:
+    jobid: 38
+    output: outputs/38/trained_model.txt, outputs/38/cross_entropy.csv, outputs/38/data_vs_training.svg, outputs/38/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/38         -architecture escape_chain         -ns 46          --fit 'd' ) 2>&1 | tail -n1 > outputs/38/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job train_model since they might be corrupted:
+outputs/38/metrics.txt
+[Fri Apr 19 14:07:37 2024]
+[Fri Apr 19 14:07:37 2024]
+Error in rule train_model:
+    jobid: 36
+    output: outputs/36/trained_model.txt, outputs/36/cross_entropy.csv, outputs/36/data_vs_training.svg, outputs/36/metrics.txt
+Error in rule train_model:
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/36         -architecture escape_chain         -ns 42          --fit 'd' ) 2>&1 | tail -n1 > outputs/36/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job train_model since they might be corrupted:
+outputs/36/metrics.txt
+[Fri Apr 19 14:07:37 2024]
+Error in rule train_model:
+    jobid: 39
+    output: outputs/39/trained_model.txt, outputs/39/cross_entropy.csv, outputs/39/data_vs_training.svg, outputs/39/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/39         -architecture escape_chain         -ns 48          --fit 'd' ) 2>&1 | tail -n1 > outputs/39/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job train_model since they might be corrupted:
+outputs/39/metrics.txt
+    jobid: 40
+    output: outputs/40/trained_model.txt, outputs/40/cross_entropy.csv, outputs/40/data_vs_training.svg, outputs/40/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/40         -architecture escape_chain         -ns 50          --fit 'd' ) 2>&1 | tail -n1 > outputs/40/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Apr 19 14:07:37 2024]
+Error in rule train_model:
+    jobid: 37
+    output: outputs/37/trained_model.txt, outputs/37/cross_entropy.csv, outputs/37/data_vs_training.svg, outputs/37/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/37         -architecture escape_chain         -ns 44          --fit 'd' ) 2>&1 | tail -n1 > outputs/37/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Apr 19 14:07:37 2024]
+Error in rule train_model:
+    jobid: 34
+    output: outputs/34/trained_model.txt, outputs/34/cross_entropy.csv, outputs/34/data_vs_training.svg, outputs/34/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/34         -architecture escape_chain         -ns 38          --fit 'd' ) 2>&1 | tail -n1 > outputs/34/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job train_model since they might be corrupted:
+outputs/40/metrics.txt
+Removing output files of failed job train_model since they might be corrupted:
+outputs/37/metrics.txt
+Removing output files of failed job train_model since they might be corrupted:
+outputs/34/metrics.txt
+[Fri Apr 19 14:07:37 2024]
+Error in rule train_model:
+    jobid: 35
+    output: outputs/35/trained_model.txt, outputs/35/cross_entropy.csv, outputs/35/data_vs_training.svg, outputs/35/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/35         -architecture escape_chain         -ns 40          --fit 'd' ) 2>&1 | tail -n1 > outputs/35/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job train_model since they might be corrupted:
+outputs/35/metrics.txt
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-19T140726.097322.snakemake.log

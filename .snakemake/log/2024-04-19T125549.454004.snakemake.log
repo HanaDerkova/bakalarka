@@ -1,0 +1,3 @@
+NameError in line 40 of /home/hade/Desktop/bc_thesis/Snakefile:
+name 'wildcards' is not defined
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 40, in <module>

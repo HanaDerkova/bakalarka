@@ -1,0 +1,18 @@
+Building DAG of jobs...
+MissingInputException in line 75 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing input files for rule collect_statistics:
+outputs/4/cross_entropy.tsv
+outputs/7/cross_entropy.tsv
+outputs/10/cross_entropy.tsv
+outputs/14/cross_entropy.tsv
+outputs/1/cross_entropy.tsv
+outputs/3/cross_entropy.tsv
+outputs/9/cross_entropy.tsv
+outputs/5/cross_entropy.tsv
+outputs/6/cross_entropy.tsv
+outputs/11/cross_entropy.tsv
+outputs/12/cross_entropy.tsv
+outputs/2/cross_entropy.tsv
+outputs/15/cross_entropy.tsv
+outputs/13/cross_entropy.tsv
+outputs/8/cross_entropy.tsv

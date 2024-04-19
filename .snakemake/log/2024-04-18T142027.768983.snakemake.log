@@ -1,0 +1,21 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	15	train_model
+	16
+
+[Thu Apr 18 14:20:27 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: 4_output/data_vs_training.svg, 4_output/cross_entropy.npy, 4_output/trained_model.txt
+    jobid: 4
+    wildcards: setup=4
+
+InputFunctionException in line 27 of /home/hade/Desktop/bc_thesis/Snakefile:
+KeyError: '{setup}'
+Wildcards:
+setup=4

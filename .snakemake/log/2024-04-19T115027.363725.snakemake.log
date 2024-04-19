@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model
+	1
+
+[Fri Apr 19 11:50:27 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/4/trained_model.txt, outputs/4/cross_entropy.tsv, outputs/4/data_vs_training.svg, outputs/4/metrics.txt
+    jobid: 0
+    wildcards: id=4
+
+InputFunctionException in line 22 of /home/hade/Desktop/bc_thesis/Snakefile:
+IndexError: index 0 is out of bounds for axis 0 with size 0
+Wildcards:
+id=4

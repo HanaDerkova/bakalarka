@@ -1,0 +1,185 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	collect_statistics
+	15	train_model
+	16
+
+[Fri Apr 19 13:58:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/26/trained_model.txt, outputs/26/cross_entropy.csv, outputs/26/data_vs_training.svg, outputs/26/metrics.txt
+    jobid: 26
+    wildcards: id=26
+
+
+[Fri Apr 19 13:58:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/29/trained_model.txt, outputs/29/cross_entropy.csv, outputs/29/data_vs_training.svg, outputs/29/metrics.txt
+    jobid: 29
+    wildcards: id=29
+
+
+[Fri Apr 19 13:58:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/19/trained_model.txt, outputs/19/cross_entropy.csv, outputs/19/data_vs_training.svg, outputs/19/metrics.txt
+    jobid: 19
+    wildcards: id=19
+
+
+[Fri Apr 19 13:58:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/24/trained_model.txt, outputs/24/cross_entropy.csv, outputs/24/data_vs_training.svg, outputs/24/metrics.txt
+    jobid: 24
+    wildcards: id=24
+
+
+[Fri Apr 19 13:58:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/30/trained_model.txt, outputs/30/cross_entropy.csv, outputs/30/data_vs_training.svg, outputs/30/metrics.txt
+    jobid: 30
+    wildcards: id=30
+
+
+[Fri Apr 19 13:58:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/28/trained_model.txt, outputs/28/cross_entropy.csv, outputs/28/data_vs_training.svg, outputs/28/metrics.txt
+    jobid: 28
+    wildcards: id=28
+
+
+[Fri Apr 19 13:58:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/18/trained_model.txt, outputs/18/cross_entropy.csv, outputs/18/data_vs_training.svg, outputs/18/metrics.txt
+    jobid: 18
+    wildcards: id=18
+
+
+[Fri Apr 19 13:58:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/22/trained_model.txt, outputs/22/cross_entropy.csv, outputs/22/data_vs_training.svg, outputs/22/metrics.txt
+    jobid: 22
+    wildcards: id=22
+
+[Fri Apr 19 13:58:54 2024]
+Finished job 19.
+1 of 16 steps (6%) done
+
+[Fri Apr 19 13:58:54 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/23/trained_model.txt, outputs/23/cross_entropy.csv, outputs/23/data_vs_training.svg, outputs/23/metrics.txt
+    jobid: 23
+    wildcards: id=23
+
+[Fri Apr 19 13:58:54 2024]
+Finished job 18.
+2 of 16 steps (12%) done
+
+[Fri Apr 19 13:58:54 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/16/trained_model.txt, outputs/16/cross_entropy.csv, outputs/16/data_vs_training.svg, outputs/16/metrics.txt
+    jobid: 16
+    wildcards: id=16
+
+[Fri Apr 19 13:58:56 2024]
+Finished job 22.
+3 of 16 steps (19%) done
+
+[Fri Apr 19 13:58:56 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/25/trained_model.txt, outputs/25/cross_entropy.csv, outputs/25/data_vs_training.svg, outputs/25/metrics.txt
+    jobid: 25
+    wildcards: id=25
+
+[Fri Apr 19 13:58:58 2024]
+Finished job 24.
+4 of 16 steps (25%) done
+
+[Fri Apr 19 13:58:58 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/27/trained_model.txt, outputs/27/cross_entropy.csv, outputs/27/data_vs_training.svg, outputs/27/metrics.txt
+    jobid: 27
+    wildcards: id=27
+
+[Fri Apr 19 13:59:01 2024]
+Finished job 16.
+5 of 16 steps (31%) done
+
+[Fri Apr 19 13:59:01 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/20/trained_model.txt, outputs/20/cross_entropy.csv, outputs/20/data_vs_training.svg, outputs/20/metrics.txt
+    jobid: 20
+    wildcards: id=20
+
+[Fri Apr 19 13:59:03 2024]
+Finished job 26.
+6 of 16 steps (38%) done
+
+[Fri Apr 19 13:59:03 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/21/trained_model.txt, outputs/21/cross_entropy.csv, outputs/21/data_vs_training.svg, outputs/21/metrics.txt
+    jobid: 21
+    wildcards: id=21
+
+[Fri Apr 19 13:59:05 2024]
+Finished job 23.
+7 of 16 steps (44%) done
+
+[Fri Apr 19 13:59:05 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/17/trained_model.txt, outputs/17/cross_entropy.csv, outputs/17/data_vs_training.svg, outputs/17/metrics.txt
+    jobid: 17
+    wildcards: id=17
+
+[Fri Apr 19 13:59:05 2024]
+Finished job 28.
+8 of 16 steps (50%) done
+[Fri Apr 19 13:59:08 2024]
+Finished job 20.
+9 of 16 steps (56%) done
+[Fri Apr 19 13:59:08 2024]
+Finished job 25.
+10 of 16 steps (62%) done
+[Fri Apr 19 13:59:09 2024]
+Finished job 21.
+11 of 16 steps (69%) done
+[Fri Apr 19 13:59:10 2024]
+Finished job 17.
+12 of 16 steps (75%) done
+[Fri Apr 19 13:59:10 2024]
+Finished job 29.
+13 of 16 steps (81%) done
+[Fri Apr 19 13:59:11 2024]
+Finished job 27.
+14 of 16 steps (88%) done
+[Fri Apr 19 13:59:12 2024]
+Finished job 30.
+15 of 16 steps (94%) done
+
+[Fri Apr 19 13:59:12 2024]
+rule collect_statistics:
+    input: outputs/1/cross_entropy.csv, outputs/2/cross_entropy.csv, outputs/3/cross_entropy.csv, outputs/4/cross_entropy.csv, outputs/5/cross_entropy.csv, outputs/6/cross_entropy.csv, outputs/7/cross_entropy.csv, outputs/8/cross_entropy.csv, outputs/9/cross_entropy.csv, outputs/10/cross_entropy.csv, outputs/11/cross_entropy.csv, outputs/12/cross_entropy.csv, outputs/13/cross_entropy.csv, outputs/14/cross_entropy.csv, outputs/15/cross_entropy.csv, outputs/16/cross_entropy.csv, outputs/17/cross_entropy.csv, outputs/18/cross_entropy.csv, outputs/19/cross_entropy.csv, outputs/20/cross_entropy.csv, outputs/21/cross_entropy.csv, outputs/22/cross_entropy.csv, outputs/23/cross_entropy.csv, outputs/24/cross_entropy.csv, outputs/25/cross_entropy.csv, outputs/26/cross_entropy.csv, outputs/27/cross_entropy.csv, outputs/28/cross_entropy.csv, outputs/29/cross_entropy.csv, outputs/30/cross_entropy.csv, config_folder/experiments.csv
+    output: outputs/statistics.tsv
+    jobid: 0
+
+[Fri Apr 19 13:59:13 2024]
+Finished job 0.
+16 of 16 steps (100%) done
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-19T135847.267668.snakemake.log

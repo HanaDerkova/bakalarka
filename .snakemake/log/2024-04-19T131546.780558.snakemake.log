@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model
+	1
+
+[Fri Apr 19 13:15:47 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/3/trained_model.txt, outputs/3/cross_entropy.tsv, outputs/3/data_vs_training.svg, outputs/3/metrics.txt
+    jobid: 0
+    wildcards: id=3
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 39 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+outputs/3/cross_entropy.tsv
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model since they might be corrupted:
+outputs/3/trained_model.txt, outputs/3/data_vs_training.svg, outputs/3/metrics.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-19T131546.780558.snakemake.log

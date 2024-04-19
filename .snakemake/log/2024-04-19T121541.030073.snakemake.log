@@ -1,0 +1,18 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model
+	1
+
+[Fri Apr 19 12:15:41 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/2/trained_model.txt, outputs/2/cross_entropy.tsv, outputs/2/data_vs_training.svg, outputs/2/metrics.txt
+    jobid: 0
+    wildcards: id=2
+
+RuleException in line 24 of /home/hade/Desktop/bc_thesis/Snakefile:
+NameError: The name 'id' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

@@ -1,0 +1,18 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	collect_statistics
+	1
+
+[Fri Apr 19 13:52:24 2024]
+rule collect_statistics:
+    input: outputs/1/cross_entropy.csv, outputs/2/cross_entropy.csv, outputs/3/cross_entropy.csv, outputs/4/cross_entropy.csv, outputs/5/cross_entropy.csv, outputs/6/cross_entropy.csv, outputs/7/cross_entropy.csv, outputs/8/cross_entropy.csv, outputs/9/cross_entropy.csv, outputs/10/cross_entropy.csv, outputs/11/cross_entropy.csv, outputs/12/cross_entropy.csv, outputs/13/cross_entropy.csv, outputs/14/cross_entropy.csv, outputs/15/cross_entropy.csv, config_folder/experiments.csv
+    output: outputs/statistics.tsv
+    jobid: 0
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-19T135223.949683.snakemake.log

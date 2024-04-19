@@ -5,6 +5,7 @@ from multiprocessing import Pool
 import numpy as np
 from scipy.stats import norm
 import os
+import pandas as pd
 import sys
 
 parser = argparse.ArgumentParser(description="parse arguments for training")
@@ -143,7 +144,21 @@ with open(os.path.join(args.output_dir, "trained_model.txt"), "a+") as file:
     for param in parameters:
         file.write(f"{param}\n")
 
-np.save(os.path.join(args.output_dir, "cross_entropy.npy"), parameters)
+
+order = order = os.path.basename(args.output_dir)
+
+# Create a dictionary with column names and values
+data = {
+    "order": [order],
+    "cross_entropy": [cross_entropy]  # Extract the single value from the array
+}
+
+# Create a DataFrame from the dictionary
+df = pd.DataFrame(data)
+
+# Save the DataFrame to a CSV file
+df.to_csv(os.path.join(args.output_dir, "cross_entropy.csv"), index=False)
+
 
 
 

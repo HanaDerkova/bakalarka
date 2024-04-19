@@ -1,0 +1,23 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	try_me
+	1
+
+[Fri Apr 19 11:35:55 2024]
+rule try_me:
+    output: outputs/4/trained_model.txt
+    jobid: 0
+    wildcards: id=4/trained_model
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 16 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+outputs/4/trained_model.txt
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-19T113554.852661.snakemake.log
