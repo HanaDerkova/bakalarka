@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	collect_statistics
+	1
+
+[Fri Apr 19 14:39:28 2024]
+rule collect_statistics:
+    input: outputs/1/cross_entropy.csv, outputs/2/cross_entropy.csv, outputs/3/cross_entropy.csv, outputs/4/cross_entropy.csv, outputs/5/cross_entropy.csv, outputs/6/cross_entropy.csv, outputs/7/cross_entropy.csv, outputs/8/cross_entropy.csv, outputs/9/cross_entropy.csv, outputs/10/cross_entropy.csv, outputs/11/cross_entropy.csv, outputs/12/cross_entropy.csv, outputs/13/cross_entropy.csv, outputs/14/cross_entropy.csv, outputs/15/cross_entropy.csv, outputs/16/cross_entropy.csv, outputs/17/cross_entropy.csv, outputs/18/cross_entropy.csv, outputs/19/cross_entropy.csv, outputs/20/cross_entropy.csv, outputs/21/cross_entropy.csv, outputs/22/cross_entropy.csv, outputs/23/cross_entropy.csv, outputs/24/cross_entropy.csv, outputs/25/cross_entropy.csv, outputs/26/cross_entropy.csv, outputs/27/cross_entropy.csv, outputs/28/cross_entropy.csv, outputs/29/cross_entropy.csv, outputs/30/cross_entropy.csv, outputs/31/cross_entropy.csv, outputs/32/cross_entropy.csv, outputs/33/cross_entropy.csv, outputs/34/cross_entropy.csv, outputs/35/cross_entropy.csv, outputs/36/cross_entropy.csv, outputs/37/cross_entropy.csv, outputs/38/cross_entropy.csv, outputs/39/cross_entropy.csv, outputs/40/cross_entropy.csv, outputs/1/metrics.txt, outputs/2/metrics.txt, outputs/3/metrics.txt, outputs/4/metrics.txt, outputs/5/metrics.txt, outputs/6/metrics.txt, outputs/7/metrics.txt, outputs/8/metrics.txt, outputs/9/metrics.txt, outputs/10/metrics.txt, outputs/11/metrics.txt, outputs/12/metrics.txt, outputs/13/metrics.txt, outputs/14/metrics.txt, outputs/15/metrics.txt, outputs/16/metrics.txt, outputs/17/metrics.txt, outputs/18/metrics.txt, outputs/19/metrics.txt, outputs/20/metrics.txt, outputs/21/metrics.txt, outputs/22/metrics.txt, outputs/23/metrics.txt, outputs/24/metrics.txt, outputs/25/metrics.txt, outputs/26/metrics.txt, outputs/27/metrics.txt, outputs/28/metrics.txt, outputs/29/metrics.txt, outputs/30/metrics.txt, outputs/31/metrics.txt, outputs/32/metrics.txt, outputs/33/metrics.txt, outputs/34/metrics.txt, outputs/35/metrics.txt, outputs/36/metrics.txt, outputs/37/metrics.txt, outputs/38/metrics.txt, outputs/39/metrics.txt, outputs/40/metrics.txt, config_folder/experiments.csv
+    output: outputs/statistics.tsv
+    jobid: 0
+
+[Fri Apr 19 14:39:28 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-19T143928.096157.snakemake.log

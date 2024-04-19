@@ -1,0 +1,6 @@
+JSONDecodeError in line 12 of /home/hade/Desktop/bc_thesis/Snakefile:
+Expecting value: line 1 column 1 (char 0)
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 12, in <module>
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode

@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model
+	1
+
+[Fri Apr 19 16:26:05 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/1/trained_model.txt, outputs/1/cross_entropy.csv, outputs/1/data_vs_training.svg, outputs/1/metrics.txt
+    jobid: 0
+    wildcards: id=1
+
+InputFunctionException in line 13 of /home/hade/Desktop/bc_thesis/Snakefile:
+JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Wildcards:
+id=1

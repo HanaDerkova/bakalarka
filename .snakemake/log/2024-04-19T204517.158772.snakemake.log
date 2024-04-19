@@ -1,0 +1,21 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	collect_statistics
+	22	train_model
+	23
+
+[Fri Apr 19 20:45:17 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/59/trained_model.txt, outputs/59/cross_entropy.csv, outputs/59/data_vs_training.svg, outputs/59/metrics.txt
+    jobid: 59
+    wildcards: id=59
+
+InputFunctionException in line 13 of /home/hade/Desktop/bc_thesis/Snakefile:
+KeyError: 'train_opt_json'
+Wildcards:
+id=59

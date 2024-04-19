@@ -1,0 +1,3 @@
+NameError in line 70 of /home/hade/Desktop/bc_thesis/Snakefile:
+name 'collect_statistics' is not defined
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 70, in <module>
