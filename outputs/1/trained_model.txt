@@ -1,8 +1,4 @@
 Architecture: chain
 Number of States: 2
 Parameters:
-2.977771947639794
-Architecture: chain
-Number of States: 2
-Parameters:
-2.977771943176998
+2.973100983976537

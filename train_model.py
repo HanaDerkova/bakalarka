@@ -16,7 +16,7 @@ parser.add_argument('input_file', type=str, help='path to input bed file')
 parser.add_argument('-o', dest='output_dir', type=str, help='path to output directory')
 parser.add_argument('-architecture', type=str ,help='specify architecture for training')
 parser.add_argument('-number_of_states','-ns', type=int, help='Number of states for Markov chain')
-parser.add_argument('-log_f', type=str, help="path to logging file")
+parser.add_argument('-log_f', type=str, default='trainig_log' ,help="path to logging file")
 parser.add_argument('--no_mean', type=bool, default=False, help='Turn of mean shifting pre trainig' )
 #ARGUMENTS FOR THREADS AND GAPS/INTERVAL/DISTIRBUTION FITTING----------------------------------
 parser.add_argument('--threads', '-tr ',default=1, type=int, help='number of threads for optimization')
@@ -28,7 +28,8 @@ parser.add_argument('--opt_options', nargs='+', type=float, help='List of input 
 
 args = parser.parse_args()
 
-logging.basicConfig(filename=args.log_f, level=logging.INFO)
+log_file = os.path.join(args.output_dir,args.log_f )
+logging.basicConfig(filename=log_file, level=logging.INFO)
 
 logging.info(args)
 
@@ -185,7 +186,7 @@ else :
         if best_result:
             logging.info(f"Best Optimization Result for iteration {iter} : {best_result}")
         else:
-            print("No optimization results found.")
+            logging.error("No optimization results found.")
 
         if best_fun < overall_best_fun:
             overall_best_fun = best_fun
@@ -196,8 +197,6 @@ if percent_visualize < 100:
     data_percentile = np.percentile(data_all, percent_visualize)
     vizualize_data = data_all[data_all <= data_percentile]
 
-print(len(data_all))
-print(len(vizualize_data))
 
 os.makedirs(args.output_dir, exist_ok=True)
 
@@ -235,7 +234,7 @@ df = pd.DataFrame(data)
 # Save the DataFrame to a CSV file
 df.to_csv(os.path.join(args.output_dir, "cross_entropy.csv"), index=False)
 
-
+logging.shutdown()
 
 
 

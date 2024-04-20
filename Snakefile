@@ -25,13 +25,13 @@ rule train_model:
        number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["number_of_tries"],
        sample_size = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["sample_size"],
        percent_to_visualize = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["percent_to_visualize"],
-       number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["id"] == wildcards.id, "params_json"].values[0])["number_of_tries"],
        ftol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["ftol"],
        gtol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["gtol"],
        maxiter = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxiter"],
        max_cor = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxcor"],
        fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0],
-       thr = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0]
+       no_mean = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "no_mean"].values[0],
+       thr = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "threads"].values[0]
    
    #threads:
          #lambda wildcards: experiments.loc[experiments["id"] == int(wildcards.id), "params_json"].values[0]
@@ -46,7 +46,10 @@ rule train_model:
         -architecture {{params.architecture}} \
         -ns {{params.number_of_states}}  \
         --fit '{{params.fit}}' \
-        --opt_options {{params.ftol}} {{params.gtol}} {{params.maxiter}} {{params.max_cor}}     """
+        --opt_options {{params.ftol}} {{params.gtol}} {{params.maxiter}} {{params.max_cor}} \
+        --no_mean {{params.no_mean}} \
+        --threads {{params.thr}}  \
+        --training_opt {{params.number_of_tries}} {{params.sample_size}} {{params.percent_to_visualize}}   """
         f""") 2>&1 | tail -n1 > {{output.metrics}}"""
 
 
