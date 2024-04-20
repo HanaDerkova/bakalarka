@@ -1,6 +1,6 @@
 import argparse
 import matplotlib.pyplot as plt
-from definitions import optimize_once, extract_feature_lengths, calculate_gap_lengths, preprocessinig, opt_w_initialization, mch_to_likelyhood_old, sh_entropy
+from definitions import obj_func_matrix, generate_matrix ,optimize_once, extract_feature_lengths, calculate_gap_lengths, preprocessinig, opt_w_initialization, mch_to_likelyhood_old, sh_entropy
 from multiprocessing import Pool
 import numpy as np
 from scipy.stats import norm
@@ -203,7 +203,9 @@ os.makedirs(args.output_dir, exist_ok=True)
 plt.hist(vizualize_data, density=True)
 likelyhoods, data_likelyhoods = mch_to_likelyhood_old(overall_best_result.x , vizualize_data ,args.architecture, args.number_of_states)
 s_e = sh_entropy(data_all)
-plt.plot(likelyhoods, label=f"states {args.number_of_states} cross entropy: {overall_best_result.fun:.2f} sh entropy: {s_e:.2f}")
+matrix = generate_matrix(overall_best_result.x, args.architecture, args.number_of_states)
+neg_log_likelyhood = obj_func_matrix(matrix, data, args.number_of_states)
+plt.plot(likelyhoods, label=f"states {args.number_of_states} cross entropy: {neg_log_likelyhood:.2f} sh entropy: {s_e:.2f}")
 plt.legend()
 plt.savefig(os.path.join(args.output_dir, "data_vs_training.svg"))
 plt.close()

@@ -33,23 +33,26 @@ df_1 = pd.read_csv("no_mean_output.csv", sep='\t')
 # Assuming "cross_entropy" is the column name
 # Replace it with the actual column name if different
 # Assuming you want to group by "architecture" and "input_file"
-grouped = df.groupby(["architecture", "input_file"])
-grouped_1 = df_1.groupby(["architecture", "input_file"])
+grouped = df.groupby(["architecture", "input_file", "no_mean"])
+grouped_1 = df_1.groupby(["architecture", "input_file", "no_mean"])
 
 # Plotting
 fig, ax = plt.subplots(figsize=(10, 6))
 
-for name, group in grouped_1:
-    architecture, input_file = name
-    data = np.load(f"data/{input_file}")
-    if architecture == "chain":
-        group = group.dropna(subset=['cross_entropy'])  # Drop NaN values in cross_entropy column if any
-        ax.plot(group["number_of_states"], group["cross_entropy"], marker='o', linestyle='-', label=f"NO MEAN {architecture} - {input_file}")
-        s_h = sh_entropy(data)
-        ax.axhline(y=s_h, color='red', linestyle='--', label=f"shannon entropy {s_h:.2f}")
+# for name, group in grouped_1:
+#     architecture, input_file = name
+#     data = np.load(f"data/{input_file}")
+#     if architecture == "chain":
+#         group = group.dropna(subset=['cross_entropy'])  # Drop NaN values in cross_entropy column if any
+#         ax.plot(group["number_of_states"], group["cross_entropy"], marker='o', linestyle='-', label=f"NO MEAN {architecture} - {input_file}")
+#         s_h = sh_entropy(data)
+#         ax.axhline(y=s_h, color='red', linestyle='--', label=f"shannon entropy {s_h:.2f}")
+
+print(grouped)
 
 for name, group in grouped:
-    architecture, input_file = name
+    print(len(name))
+    #architecture, input_file = name
     data = np.load(f"data/{input_file}")
     if architecture == "chain" and input_file == "bimodal.npy":
         group = group.dropna(subset=['cross_entropy'])  # Drop NaN values in cross_entropy column if any

@@ -1,93 +1,200 @@
-order	cross_entropy	input_file	architecture	number_of_states	threads	fit	params_json	time	memory
-1	4.002803775605156	gaussian.npy	chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	1.39	170356
-2	3.418862297232668	gaussian.npy	chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	3.87	170932
-3	3.186059043162986	gaussian.npy	chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	3.91	171700
-4	3.073834036034422	gaussian.npy	chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	5.47	171340
-5	3.2653174860936987	gaussian.npy	chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.31	171340
-6	3.7562522363930704	gaussian.npy	chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.95	171492
-7	4.859917670980636	gaussian.npy	chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.89	171436
-8	7.412042558946973	gaussian.npy	chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	3.69	171512
-9	11.571883468181197	gaussian.npy	chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.46	171408
-10	17.00279272627944	gaussian.npy	chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.92	171184
-11	24.354650736874223	gaussian.npy	chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.53	171892
-12	30.037424747640856	gaussian.npy	chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	5.32	171576
-13	36.30441994364337	gaussian.npy	chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.24	171332
-14	41.36446545714656	gaussian.npy	chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	5.86	171100
-15	44.18082436423641	gaussian.npy	chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.26	171104
-16	46.05170185988091	gaussian.npy	escape_chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	7.15	171676
-17	46.05170185988091	gaussian.npy	escape_chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	4.67	171712
-18	46.05170185988091	gaussian.npy	escape_chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.93	171508
-19	45.87123325725074	gaussian.npy	escape_chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.41	171440
-20	45.573922854541934	gaussian.npy	escape_chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.32	171284
-21	44.80635743171549	gaussian.npy	escape_chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	5.35	171256
-22	43.30529027469132	gaussian.npy	escape_chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	8.92	171568
-23	39.68418037646663	gaussian.npy	escape_chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	11.37	171468
-24	33.97647738292345	gaussian.npy	escape_chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	11.17	171240
-25	28.339305812605502	gaussian.npy	escape_chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	11.96	171156
-26	21.05626758821744	gaussian.npy	escape_chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	16.07	171704
-27	15.235975461281267	gaussian.npy	escape_chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	12.28	171224
-28	9.35000763361156	gaussian.npy	escape_chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	18.33	171244
-29	6.670300569858145	gaussian.npy	escape_chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	23.31	171580
-30	4.258106994011248	gaussian.npy	escape_chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	25.33	171588
-31	3.2812066683481422	gaussian.npy	escape_chain	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	130.80	170796
-32	3.12309260819632	gaussian.npy	escape_chain	34	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	117.48	171868
-33	2.96527567802721	gaussian.npy	escape_chain	36	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	87.67	171280
-34	2.965258225676738	gaussian.npy	escape_chain	38	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	166.94	171188
-35	2.965255597793924	gaussian.npy	escape_chain	40	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	183.35	171644
-36	2.965333018391028	gaussian.npy	escape_chain	42	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	179.56	171064
-37	2.965269851505956	gaussian.npy	escape_chain	44	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	224.48	171788
-38	2.965274563250984	gaussian.npy	escape_chain	46	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	288.49	171708
-39	2.9653060064979444	gaussian.npy	escape_chain	48	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	240.00	171588
-40	2.965232242515749	gaussian.npy	escape_chain	50	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	289.20	171284
-41	4.002920550090664	gaussian.npy	combined	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	7.37	169328
-42	3.898212000411709	gaussian.npy	combined	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	9.01	170264
-43	3.4744275784931573	gaussian.npy	combined	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	10.38	170252
-44	3.2393976108627194	gaussian.npy	combined	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	24.29	170364
-45	3.0739129781711947	gaussian.npy	combined	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	33.75	170056
-46	3.0189134765590477	gaussian.npy	combined	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	33.35	169816
-47	3.01042851494413	gaussian.npy	combined	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	37.35	169568
-48	3.000368673095532	gaussian.npy	combined	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	56.12	170128
-49	3.005548147514839	gaussian.npy	combined	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	69.78	169804
-50	2.9972684060816284	gaussian.npy	combined	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	37.90	170484
-51	2.9954912155662847	gaussian.npy	combined	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	75.32	170164
-52	2.9910819269016247	gaussian.npy	combined	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	79.45	170032
-53	2.989843999506543	gaussian.npy	combined	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	116.27	168928
-54	2.99343591169184	gaussian.npy	combined	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	144.06	169736
-55	2.9924679317847422	gaussian.npy	combined	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	445.08	169480
-56	2.9888475730967063	gaussian.npy	combined	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	348.97	169684
-57	2.9930502536028207	gaussian.npy	combined	34	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	432.72	169088
-58	2.992147523278802	gaussian.npy	combined	36	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	362.36	169320
-59	3.0038626678656297	gaussian.npy	combined	38	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	372.01	170112
-60	2.995627970569588	gaussian.npy	combined	40	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	423.72	170916
-61	2.991539848074907	gaussian.npy	combined	42	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	332.18	169492
-62	2.9863901668477557	gaussian.npy	combined	44	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	139.13	170000
-63	4.317217383931144	bimodal.npy	chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	6.35	169660
-64	3.9598136720493016	bimodal.npy	chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	10.09	152668
-65	3.939927547630172	bimodal.npy	chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	13.45	169380
-66	3.9282073746320503	bimodal.npy	chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	12.86	169232
-67	4.081567459046807	bimodal.npy	chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	3.12	170188
-68	4.9242802180329255	bimodal.npy	chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	14.00	169936
-69	6.911247299825172	bimodal.npy	chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	14.00	149644
-70	11.519528722914645	bimodal.npy	chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	14.61	169680
-71	18.064952610383564	bimodal.npy	chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	9.82	169416
-72	21.83149432855887	bimodal.npy	chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	10.30	169540
-73	45.21022922186466	bimodal.npy	chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	10.00	153296
-74	45.721951654392775	bimodal.npy	chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	9.95	153572
-75	46.0083799780853	bimodal.npy	chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	9.74	169640
-76	45.9581947219803	bimodal.npy	chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	13.35	169632
-77	4.31722566929424	bimodal.npy	combined	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	12.04	169448
-78	4.241945700332163	bimodal.npy	combined	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	12.05	169808
-79	3.975577032900547	bimodal.npy	combined	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	8.44	169776
-80	3.929269150578509	bimodal.npy	combined	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	19.76	169340
-81	3.9253797949860183	bimodal.npy	combined	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	21.58	169336
-82	3.9220570714460754	bimodal.npy	combined	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	24.10	169600
-83	3.929649322610298	bimodal.npy	combined	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	25.00	169528
-84	3.9459074646867776	bimodal.npy	combined	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	20.90	146844
-85	3.596853852485097	bimodal.npy	combined	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	69.06	147284
-86	3.925180768584176	bimodal.npy	combined	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	28.76	169416
-87	3.9384803428043873	bimodal.npy	combined	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	46.06	169588
-88	3.9690699586808327	bimodal.npy	combined	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	45.98	169212
-89	4.117198561737212	bimodal.npy	combined	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	25.77	170056
-90	3.4653567861335444	bimodal.npy	combined	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	148.30	147512
-91	3.9459961153326266	bimodal.npy	combined	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	89.96	169780
-92	3.615509207736945	bimodal.npy	combined	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	171.20	146872
+order	cross_entropy	input_file	architecture	number_of_states	threads	fit	params_json	train_opt_json	no_mean	log_file	time	memory
+1	3.9956280873524905	gaussian.npy	chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.62	168144
+2	3.4019594745958504	gaussian.npy	chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.99	167984
+3	3.1737232208072377	gaussian.npy	chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.20	168344
+4	3.05157412260858	gaussian.npy	chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.44	168364
+5	3.0633303152690305	gaussian.npy	chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.97	168280
+6	3.644538205777289	gaussian.npy	chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.79	168588
+7	4.363516778799808	gaussian.npy	chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	5.09	168168
+8	6.609350113475647	gaussian.npy	chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	4.78	168368
+9	10.930839277776014	gaussian.npy	chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	4.71	167912
+10	16.46570048187253	gaussian.npy	chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.92	167980
+11	23.423320689845962	gaussian.npy	chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.38	168512
+12	28.170590319996446	gaussian.npy	chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.40	168052
+13	35.21309394724492	gaussian.npy	chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.44	168276
+14	40.38415946551617	gaussian.npy	chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.97	168528
+15	42.748180251952014	gaussian.npy	chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.22	168128
+16	46.05170185988091	gaussian.npy	escape_chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.68	168252
+17	46.05170185988091	gaussian.npy	escape_chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.71	168076
+18	46.05170185988091	gaussian.npy	escape_chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.30	168352
+19	45.7754310922049	gaussian.npy	escape_chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.72	167832
+20	45.240350694819654	gaussian.npy	escape_chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.42	168120
+21	44.27147891872377	gaussian.npy	escape_chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.23	167776
+22	42.84102920218066	gaussian.npy	escape_chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.96	168064
+23	39.15651260140093	gaussian.npy	escape_chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.84	168028
+24	33.10105024096453	gaussian.npy	escape_chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	4.01	168144
+25	27.368970163988838	gaussian.npy	escape_chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.57	168136
+26	19.935593344125788	gaussian.npy	escape_chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.76	168392
+27	13.932558511769914	gaussian.npy	escape_chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	5.07	168056
+28	8.003708321286151	gaussian.npy	escape_chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	5.79	168188
+29	6.168717181486278	gaussian.npy	escape_chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	4.89	168400
+30	3.86491910075737	gaussian.npy	escape_chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	6.98	168512
+31	2.931269251096165	gaussian.npy	escape_chain	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	6.33	168216
+32	3.0174687330010332	gaussian.npy	escape_chain	34	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	7.54	168340
+33	2.912029034461872	gaussian.npy	escape_chain	36	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	8.01	167732
+34	2.8924744349747367	gaussian.npy	escape_chain	38	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	8.89	168388
+35	2.858788829828669	gaussian.npy	escape_chain	40	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	8.60	168376
+36	2.8765771442413497	gaussian.npy	escape_chain	42	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	8.84	168216
+37	2.902242855468607	gaussian.npy	escape_chain	44	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	10.87	167844
+38	2.9008191390290023	gaussian.npy	escape_chain	46	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	11.62	167804
+39	2.9009438800130662	gaussian.npy	escape_chain	48	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	11.08	168340
+40	2.899468927479711	gaussian.npy	escape_chain	50	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	13.38	167928
+41	3.986292262421303	gaussian.npy	combined	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.90	168116
+42	3.4068331408779438	gaussian.npy	combined	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.17	168224
+43	3.206584675146448	gaussian.npy	combined	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	4.25	167896
+44	3.079231077929008	gaussian.npy	combined	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	5.10	168024
+45	2.984941891457733	gaussian.npy	combined	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	6.42	168116
+46	2.98909124608706	gaussian.npy	combined	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	9.26	167832
+47	2.9825766434672083	gaussian.npy	combined	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	8.26	168288
+48	2.9715745160855036	gaussian.npy	combined	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	7.84	168324
+49	2.956715590462089	gaussian.npy	combined	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	8.35	167600
+50	2.938407606084896	gaussian.npy	combined	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	11.09	168684
+51	2.9546922835936784	gaussian.npy	combined	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	10.58	168268
+52	2.9472902761934936	gaussian.npy	combined	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	11.81	168080
+53	2.968793971718532	gaussian.npy	combined	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	16.81	168204
+54	2.9481901987822368	gaussian.npy	combined	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	15.38	167904
+55	2.9563342389475213	gaussian.npy	combined	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	20.76	168636
+56	2.9539630609510685	gaussian.npy	combined	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	23.83	167988
+57	2.9710023832201333	gaussian.npy	combined	34	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	26.24	168364
+58	2.9314527054086947	gaussian.npy	combined	36	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	25.48	168280
+59	2.9108788986361605	gaussian.npy	combined	38	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	30.56	168260
+60	2.9484465964134707	gaussian.npy	combined	40	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	40.31	168416
+61	2.886357477491296	gaussian.npy	combined	42	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	30.41	168176
+62	2.9325058564252213	gaussian.npy	combined	44	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	42.10	167484
+63	4.295298055582959	bimodal.npy	chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.60	168620
+64	3.9522574264798314	bimodal.npy	chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.43	168336
+65	3.9122847263781764	bimodal.npy	chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.14	167992
+66	3.907593960553576	bimodal.npy	chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.57	168440
+67	4.015971585792724	bimodal.npy	chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.64	168508
+68	4.710441072789921	bimodal.npy	chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.67	168424
+69	6.421291559368418	bimodal.npy	chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	4.02	168276
+70	10.82357871652657	bimodal.npy	chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	5.09	168328
+71	16.646231979656573	bimodal.npy	chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	5.08	167868
+72	20.998926852322167	bimodal.npy	chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	6.75	168412
+73	22.576271779110073	bimodal.npy	chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.01	167648
+74	23.443867126727337	bimodal.npy	chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.08	168388
+75	23.99227742022828	bimodal.npy	chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.85	168572
+76	23.856346549792928	bimodal.npy	chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	5.02	168456
+77	4.295092893183661	bimodal.npy	combined	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.71	168224
+78	4.007502018147823	bimodal.npy	combined	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	3.51	168068
+79	3.932781186099212	bimodal.npy	combined	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	5.16	168288
+80	3.9577398023089874	bimodal.npy	combined	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	4.91	168012
+81	3.905359584455368	bimodal.npy	combined	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	7.09	168292
+82	3.8103813435509135	bimodal.npy	combined	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	7.70	168532
+83	3.902811227038369	bimodal.npy	combined	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	6.52	168432
+84	3.6593098713871286	bimodal.npy	combined	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	11.44	168084
+85	3.60435966625096	bimodal.npy	combined	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	16.97	168132
+86	3.5342427590437215	bimodal.npy	combined	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	21.76	168240
+87	3.488028587352048	bimodal.npy	combined	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	22.57	168568
+88	3.4439443813610016	bimodal.npy	combined	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	28.91	168052
+89	3.40715891131046	bimodal.npy	combined	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	24.02	167808
+90	3.410304204261519	bimodal.npy	combined	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	27.81	167876
+91	3.3819324895075518	bimodal.npy	combined	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	32.59	168088
+92	3.407036379776886	bimodal.npy	combined	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	23.85	168284
+93	3.9823373866005194	gaussian.npy	chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.24	167824
+94	3.4115094958201384	gaussian.npy	chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.59	167844
+95	3.1776211601304247	gaussian.npy	chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.79	168444
+96	3.0294454824137493	gaussian.npy	chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.16	168284
+97	3.0738105990992373	gaussian.npy	chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.93	168404
+98	3.4729795388500424	gaussian.npy	chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.75	168388
+99	4.45261842088548	gaussian.npy	chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.07	168060
+100	7.222377930606773	gaussian.npy	chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.35	168020
+101	10.557801437326685	gaussian.npy	chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.59	168092
+102	16.49669177951929	gaussian.npy	chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.16	168000
+103	24.100087810101705	gaussian.npy	chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.88	168140
+104	28.35825466812025	gaussian.npy	chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.77	168008
+105	34.778547486677326	gaussian.npy	chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.31	168268
+106	40.66759284854683	gaussian.npy	chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.15	167988
+107	42.680044114436704	gaussian.npy	chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.43	168420
+108	46.05170185988091	gaussian.npy	escape_chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.72	167924
+109	46.05170185988091	gaussian.npy	escape_chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.49	168308
+110	46.05170185988091	gaussian.npy	escape_chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.46	168388
+111	45.591214853656595	gaussian.npy	escape_chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.28	168092
+112	45.24094781229198	gaussian.npy	escape_chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.04	168220
+113	44.449790798241466	gaussian.npy	escape_chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.31	167572
+114	43.376653945319596	gaussian.npy	escape_chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.95	168000
+115	39.14745217267868	gaussian.npy	escape_chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.88	168608
+116	33.44646387323202	gaussian.npy	escape_chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.51	168024
+117	27.170221668664066	gaussian.npy	escape_chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.42	168396
+118	20.60266598145737	gaussian.npy	escape_chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.77	168152
+119	14.434381467680602	gaussian.npy	escape_chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.84	168088
+120	8.332426024858997	gaussian.npy	escape_chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	5.54	167976
+121	5.5968943448106705	gaussian.npy	escape_chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	5.45	168340
+122	4.130338561236386	gaussian.npy	escape_chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	6.16	168120
+123	3.087639836723852	gaussian.npy	escape_chain	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	6.60	168032
+124	3.0281302456460124	gaussian.npy	escape_chain	34	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	7.02	168380
+125	2.8906432502879618	gaussian.npy	escape_chain	36	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	8.74	168368
+126	2.9000351184858637	gaussian.npy	escape_chain	38	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	9.01	168344
+127	2.9007106480103717	gaussian.npy	escape_chain	40	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	10.38	167804
+128	2.8928018157070667	gaussian.npy	escape_chain	42	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	9.42	167784
+129	2.920625101651585	gaussian.npy	escape_chain	44	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	10.24	168444
+130	2.9096719690748265	gaussian.npy	escape_chain	46	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	11.83	167916
+131	2.9266744134946583	gaussian.npy	escape_chain	48	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	11.10	168412
+132	2.8923741168926616	gaussian.npy	escape_chain	50	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	14.29	168424
+133	3.993230651255127	gaussian.npy	combined	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.60	168272
+134	3.402051276628936	gaussian.npy	combined	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.09	167784
+135	3.183831036094317	gaussian.npy	combined	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.84	168368
+136	3.0704004401282345	gaussian.npy	combined	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	5.40	168216
+137	3.0122155999297164	gaussian.npy	combined	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	6.00	168164
+138	2.998056474214373	gaussian.npy	combined	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	6.18	168296
+139	3.0138246004868265	gaussian.npy	combined	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	6.99	168236
+140	2.9554350946431303	gaussian.npy	combined	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	8.56	168544
+141	2.981545363083694	gaussian.npy	combined	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	10.21	168008
+142	2.9971595391763133	gaussian.npy	combined	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	9.64	168260
+143	2.9265715898856404	gaussian.npy	combined	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	12.98	168004
+144	2.9342041932396405	gaussian.npy	combined	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	15.82	168252
+145	2.958979768289653	gaussian.npy	combined	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	22.03	168324
+146	2.9307125025143024	gaussian.npy	combined	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	18.91	168480
+147	2.8937720345651936	gaussian.npy	combined	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	19.00	168376
+148	2.900654623274751	gaussian.npy	combined	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	25.43	168452
+149	2.9298944055802827	gaussian.npy	combined	34	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	22.41	168408
+150	2.9523910585849964	gaussian.npy	combined	36	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	27.32	167560
+151	2.9063439159480797	gaussian.npy	combined	38	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	23.91	167800
+152	2.9444841157920614	gaussian.npy	combined	40	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	37.82	167832
+153	2.932995861522784	gaussian.npy	combined	42	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	46.15	168264
+154	2.9675357243109266	gaussian.npy	combined	44	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	41.16	168328
+155	4.305217587398492	bimodal.npy	chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.54	168088
+156	3.9402538421825564	bimodal.npy	chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.79	168216
+157	3.8946581925531634	bimodal.npy	chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.07	168104
+158	3.924730094517327	bimodal.npy	chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.75	168380
+159	3.962176853338006	bimodal.npy	chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.85	168272
+160	4.63986483691284	bimodal.npy	chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.03	168436
+161	6.39968413593384	bimodal.npy	chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.65	167948
+162	10.881253606878934	bimodal.npy	chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	5.26	168408
+163	16.54859172705002	bimodal.npy	chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	5.09	168292
+164	21.151603546942766	bimodal.npy	chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	5.39	168128
+165	22.830544074191323	bimodal.npy	chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.53	168512
+166	23.68214290164332	bimodal.npy	chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.94	168376
+167	23.902818837890692	bimodal.npy	chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.85	168168
+168	24.561697324809195	bimodal.npy	chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	4.14	167748
+169	4.3031320468975185	bimodal.npy	combined	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	2.81	168296
+170	3.9486506917117192	bimodal.npy	combined	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.83	168368
+171	4.2925598230888395	bimodal.npy	combined	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	3.28	168296
+172	3.921814077359392	bimodal.npy	combined	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	6.48	168168
+173	3.91008435758348	bimodal.npy	combined	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	8.50	167904
+174	3.7570520220424446	bimodal.npy	combined	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	12.71	168300
+175	3.7135603141234617	bimodal.npy	combined	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	10.17	167768
+176	3.6485604895797534	bimodal.npy	combined	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	11.36	168312
+177	3.5539693741209137	bimodal.npy	combined	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	17.40	167772
+178	3.5281312149946182	bimodal.npy	combined	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	27.41	168528
+179	3.486740797678159	bimodal.npy	combined	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	22.93	168028
+180	3.4487779344296134	bimodal.npy	combined	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	21.47	168104
+181	3.4315571811019367	bimodal.npy	combined	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	23.34	167792
+182	3.424573823678525	bimodal.npy	combined	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	26.43	168444
+183	3.4054694124555067	bimodal.npy	combined	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	30.55	168316
+184	3.4241061554399064	bimodal.npy	combined	32	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 1000, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	False	trainig_log	26.61	168400
+185	46.05170185988091	far_gaussian.npy	chain	2	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.40	168304
+186	46.05170185988091	far_gaussian.npy	chain	4	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.70	168312
+187	46.05170185988091	far_gaussian.npy	chain	6	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.88	168300
+188	46.05170185988091	far_gaussian.npy	chain	8	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.47	168416
+189	46.05170185988091	far_gaussian.npy	chain	10	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.68	168364
+190	46.05170185988091	far_gaussian.npy	chain	12	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.60	168204
+191	46.05170185988091	far_gaussian.npy	chain	14	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.22	167708
+192	46.05170185988091	far_gaussian.npy	chain	16	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.52	168412
+193	46.05170185988091	far_gaussian.npy	chain	18	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.90	167776
+194	46.05170185988091	far_gaussian.npy	chain	20	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.89	167884
+195	46.05170185988091	far_gaussian.npy	chain	22	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.76	168344
+196	46.051701859880886	far_gaussian.npy	chain	24	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.65	168240
+197	46.05170185987615	far_gaussian.npy	chain	26	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.53	168260
+198	46.05170185986062	far_gaussian.npy	chain	28	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.76	168364
+199	46.05170185984864	far_gaussian.npy	chain	30	1	d	"{""ftol"": 1e-6,""gtol"": 1e-6,""maxiter"": 15000,""maxcor"": 10}"	"{ ""sample_size"": 500, ""number_of_tries"": 4, ""percent_to_visualize"": 100 }"	True	trainig_log	2.80	168392
