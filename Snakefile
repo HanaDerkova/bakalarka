@@ -27,7 +27,7 @@ rule train_model:
        fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0]
    
    
-   threads: lambda wildcards: experiments.loc[experiments["id"] == wildcards.id, "thread"].values[0]
+   #threads: lambda wildcards: experiments.loc[experiments["id"] == int(wildcards.id), "thread"].values[0]
 
    output:
        model=f"{output_dir}/{{id}}/trained_model.txt",
