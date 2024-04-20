@@ -10,9 +10,15 @@ data_dir = config["data_file"]
 experiments = pd.read_csv(experiments_file, sep=",")
 default_target = f"{output_dir}/statistics.tsv"
 
+print(type( experiments.loc[experiments["order"] == 2, "threads"].values[0]))
+
+def f(wildcards):
+    print(type( experiments.loc[experiments["order"] == int(wildcards.id), "threads"].values[0]))
+    return experiments.loc[experiments["order"] == int(wildcards.id), "threads"].values[0]
 
 rule train_model:
-   input: inputt=lambda w: f"{data_dir}/" + experiments.loc[experiments["order"] == int(w.id), "input_file"].values[0]
+   input: 
+        inputt=lambda w: f"{data_dir}/" + experiments.loc[experiments["order"] == int(w.id), "input_file"].values[0]
    params:
        architecture = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "architecture"].values[0],
        number_of_states = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "number_of_states"].values[0],
@@ -24,11 +30,11 @@ rule train_model:
        gtol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["gtol"],
        maxiter = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxiter"],
        max_cor = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxcor"],
-       fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0]
+       fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0],
+       thr = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0]
    
-   
-   #threads: lambda wildcards: experiments.loc[experiments["id"] == int(wildcards.id), "thread"].values[0]
-
+   #threads:
+         #lambda wildcards: experiments.loc[experiments["id"] == int(wildcards.id), "params_json"].values[0]
    output:
        model=f"{output_dir}/{{id}}/trained_model.txt",
        cross_entropy=f"{output_dir}/{{id}}/cross_entropy.csv",
@@ -58,7 +64,6 @@ rule collect_statistics:
        cross_entropies = cross_entropies.merge(experiments, on="order")
 
        metrics = [open(f).read().strip() for f in input.metrics]
-       print(metrics)
        # Add time and memory metrics to the DataFrame
        cross_entropies['time'] = [metric.split()[0] for metric in metrics]
        cross_entropies['memory'] = [metric.split()[1] for metric in metrics]
@@ -129,3 +134,38 @@ rule all:
 #         # """
 
 # #TODO : u still do not have threads here !!!! add them when running on the cluster
+
+# no_mean_output_dir = "no_m_outputs"
+
+# rule train_model_no_mean:
+#     input: 
+#         inputt=lambda w: f"{data_dir}/" + experiments.loc[experiments["order"] == int(w.id), "input_file"].values[0]
+#     params:
+#        architecture = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "architecture"].values[0],
+#        number_of_states = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "number_of_states"].values[0],
+#        #number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["number_of_tries"],
+#        #sample_size = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["sample_size"],
+#        #percent_to_visualize = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["percent_to_visualize"],
+#        #number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["id"] == wildcards.id, "params_json"].values[0])["number_of_tries"],
+#        ftol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["ftol"],
+#        gtol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["gtol"],
+#        maxiter = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxiter"],
+#        max_cor = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxcor"],
+#        fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0]
+   
+   
+#    #threads: lambda wildcards: experiments.loc[experiments["id"] == int(wildcards.id), "thread"].values[0]
+
+#     output:
+#        model=f"{no_mean_output_dir}/{{id}}/trained_model.txt",
+#        cross_entropy=f"{no_mean_output_dir}/{{id}}/cross_entropy.csv",
+#        histogram_viz=f"{no_mean_output_dir}/{{id}}/data_vs_training.svg",
+#        metrics=f"{no_mean_output_dir}/{{id}}/metrics.txt"
+
+#     shell: f"""(/usr/bin/time -f "%e %M" python3 no_mean_training.py {{input}} \
+#         -o {output_dir}/no_mean/{{wildcards.id}} \
+#         -architecture {{params.architecture}} \
+#         -ns {{params.number_of_states}}  \
+#         --fit '{{params.fit}}' \
+#         --opt_options {{params.ftol}} {{params.gtol}} {{params.maxiter}} {{params.max_cor}}     """
+#         f""") 2>&1 | tail -n1 > {{output.metrics}}"""

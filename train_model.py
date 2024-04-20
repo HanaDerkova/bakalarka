@@ -1,6 +1,6 @@
 import argparse
 import matplotlib.pyplot as plt
-from definitions import extract_feature_lengths, calculate_gap_lengths, preprocessinig, opt_w_initialization, mch_to_likelyhood_old, sh_entropy
+from definitions import optimize_once, extract_feature_lengths, calculate_gap_lengths, preprocessinig, opt_w_initialization, mch_to_likelyhood_old, sh_entropy
 from multiprocessing import Pool
 import numpy as np
 from scipy.stats import norm
@@ -17,6 +17,7 @@ parser.add_argument('-o', dest='output_dir', type=str, help='path to output dire
 parser.add_argument('-architecture', type=str ,help='specify architecture for training')
 parser.add_argument('-number_of_states','-ns', type=int, help='Number of states for Markov chain')
 parser.add_argument('-log_f', type=str, help="path to logging file")
+parser.add_argument('--no_mean', type=bool, default=False, help='Turn of mean shifting pre trainig' )
 #ARGUMENTS FOR THREADS AND GAPS/INTERVAL/DISTIRBUTION FITTING----------------------------------
 parser.add_argument('--threads', '-tr ',default=1, type=int, help='number of threads for optimization')
 parser.add_argument('--fit', type=str, default='i', choices=['g', 'd', 'i'], help='fit gaps / intervals or load distribution from .npy file, defalut intervals')
@@ -91,72 +92,104 @@ overall_best_fun = float('inf')
 # storing data here
 data_all = data.copy()
 
-for iter in range(number_of_tries): 
+if not args.no_mean:
+    for iter in range(number_of_tries): 
 
-    # sample data for training in sample size was specfied
-    if sample_size != None :
-        sample = random.choices(data_all, k=sample_size)
-        data = sample
-    
-    # create args list
-    args_list = [(args.number_of_states, data, bounds, options, args.architecture )] * args.threads
-
-    # mean shifting
-    with Pool(args.threads) as pool:
-        # Perform optimization in parallel
-        results = pool.map(preprocessinig, args_list)
-
-    #choose the most optimal initalization value
-    best_initalization = None
-    best_fun = float('inf')
-
-    # Iterate through all optimization results
-    for i, result in enumerate(results):
-        # Check if the current result has a smaller fun value than the current best
-        if result.fun < best_fun:
-            best_initalization = result
-            best_fun = result.fun
-    num_additional_initializations = args.threads - 1
-
-    # Sigma for Gaussian noise
-    sigma = 0.1
-
-    # Create additional initializations for next level of trainig
-    initial_guesses = [best_initalization.x]
-    for i in range(num_additional_initializations):
-        # Generate Gaussian noise
-        noise = np.random.normal(loc=0, scale=sigma, size=len(best_initalization.x))
-
-        # Add noise to the best_initialization
-        initialization = best_initalization.x + noise
-
-        # Append the new initialization to the list
-        initial_guesses.append(initialization)
-
-    args_list = [(args.number_of_states, data, bounds, options, i , args.architecture) for i in initial_guesses]
-
-    with Pool(args.threads) as pool:
-        results = pool.map(opt_w_initialization, args_list)
+        # sample data for training in sample size was specfied
+        if sample_size != None :
+            sample = random.choices(data_all, k=sample_size)
+            data = sample
         
-    best_result = None
-    best_fun = float('inf')  # Initialize to positive infinity
+        # create args list
+        args_list = [(args.number_of_states, data, bounds, options, args.architecture )] * args.threads
 
-    # Iterate through all optimization results
-    for i, result in enumerate(results):
-        if result.fun < best_fun:
-            best_result = result
-            best_fun = result.fun
+        # mean shifting
+        with Pool(args.threads) as pool:
+            # Perform optimization in parallel
+            results = pool.map(preprocessinig, args_list)
 
-    # Print the best optimization result
-    if best_result:
-        logging.info(f"Best Optimization Result for iteration {iter} : {best_result}")
-    else:
-        print("No optimization results found.")
+        #choose the most optimal initalization value
+        best_initalization = None
+        best_fun = float('inf')
 
-    if best_fun < overall_best_fun:
-        overall_best_fun = best_fun
-        overall_best_result = best_result
+        # Iterate through all optimization results
+        for i, result in enumerate(results):
+            # Check if the current result has a smaller fun value than the current best
+            if result.fun < best_fun:
+                best_initalization = result
+                best_fun = result.fun
+        num_additional_initializations = args.threads - 1
 
+        # Sigma for Gaussian noise
+        sigma = 0.1
+
+        # Create additional initializations for next level of trainig
+        initial_guesses = [best_initalization.x]
+        for i in range(num_additional_initializations):
+            # Generate Gaussian noise
+            noise = np.random.normal(loc=0, scale=sigma, size=len(best_initalization.x))
+
+            # Add noise to the best_initialization
+            initialization = best_initalization.x + noise
+
+            # Append the new initialization to the list
+            initial_guesses.append(initialization)
+
+        args_list = [(args.number_of_states, data, bounds, options, i , args.architecture) for i in initial_guesses]
+
+        with Pool(args.threads) as pool:
+            results = pool.map(opt_w_initialization, args_list)
+            
+        best_result = None
+        best_fun = float('inf')  # Initialize to positive infinity
+
+        # Iterate through all optimization results
+        for i, result in enumerate(results):
+            if result.fun < best_fun:
+                best_result = result
+                best_fun = result.fun
+
+        # Print the best optimization result
+        if best_result:
+            logging.info(f"Best Optimization Result for iteration {iter} : {best_result}")
+        else:
+            print("No optimization results found.")
+
+        if best_fun < overall_best_fun:
+            overall_best_fun = best_fun
+            overall_best_result = best_result
+else :
+    for iter in range(number_of_tries): 
+
+        # sample data for training in sample size was specfied
+        if sample_size != None :
+            sample = random.choices(data_all, k=sample_size)
+            data = sample
+
+        #number_of_states, data, bounds, options, architecture
+        args_list = [(args.number_of_states, data, bounds, options, args.architecture) ] * args.threads
+
+        with Pool(args.threads) as pool:
+            results = pool.map(optimize_once, args_list)
+            
+        best_result = None
+        best_fun = float('inf')  # Initialize to positive infinity
+
+        # Iterate through all optimization results
+        for i, result in enumerate(results):
+            if result.fun < best_fun:
+                best_result = result
+                best_fun = result.fun
+
+        # Print the best optimization result
+        if best_result:
+            logging.info(f"Best Optimization Result for iteration {iter} : {best_result}")
+        else:
+            print("No optimization results found.")
+
+        if best_fun < overall_best_fun:
+            overall_best_fun = best_fun
+            overall_best_result = best_result
 
 vizualize_data = data_all 
 if percent_visualize < 100:
