@@ -1,0 +1,18 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model
+	1
+
+[Tue Apr 23 22:15:50 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/10/trained_model.txt, outputs/10/cross_entropy.csv, outputs/10/data_vs_training.svg, outputs/10/metrics.txt
+    jobid: 0
+    wildcards: id=10
+
+RuleException in line 18 of /home/hade/Desktop/bc_thesis/Snakefile:
+NameError: The name "'--no_mean' if params" is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

@@ -1,0 +1,121 @@
+INFO:root:Namespace(input_file='data/far_gaussian.npy', output_dir='outputs/386', architecture='escape_chain', number_of_states=8, log_f='trainig_log', no_mean=1, threads=1, fit='d', training_opt=[10, 500, 100], opt_options=[1e-06, 1e-06, 15000.0, 10.0])
+INFO:root:Best Optimization Result for iteration 0 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 7.725e-01  1.220e-01  2.691e-01  8.366e-01  9.928e-02
+             4.324e-01  2.962e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 1 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 2.409e-03  6.554e-02  8.776e-01  7.564e-02  5.604e-01
+             8.015e-01  5.840e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 2 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 6.477e-01  4.907e-01  6.429e-01  2.864e-01  9.992e-01
+             8.154e-01  5.671e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 3 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 4.976e-01  6.655e-02  4.816e-01  3.636e-01  5.729e-01
+             2.878e-01  7.198e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 4 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 3.765e-01  6.420e-01  7.743e-01  8.544e-01  5.851e-03
+             4.103e-01  6.246e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 5 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 9.021e-01  9.616e-01  5.652e-01  8.861e-01  6.952e-01
+             4.870e-01  6.126e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 6 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 9.364e-01  6.023e-01  4.745e-01  7.877e-01  5.999e-01
+             6.094e-01  2.574e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 7 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 4.063e-01  9.605e-01  9.137e-01  9.964e-01  4.638e-01
+             4.200e-01  9.293e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 8 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 4.124e-01  3.651e-01  1.036e-01  7.285e-01  4.490e-01
+             9.632e-01  8.454e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 9 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 6.472e-01  8.123e-01  9.561e-01  9.725e-01  6.011e-01
+             6.581e-01  7.471e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+             0.000e+00  0.000e+00]
+     nfev: 8
+     njev: 1
+ hess_inv: <7x7 LbfgsInvHessProduct with dtype=float64>

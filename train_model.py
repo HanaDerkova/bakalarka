@@ -17,7 +17,7 @@ parser.add_argument('-o', dest='output_dir', type=str, help='path to output dire
 parser.add_argument('-architecture', type=str ,help='specify architecture for training')
 parser.add_argument('-number_of_states','-ns', type=int, help='Number of states for Markov chain')
 parser.add_argument('-log_f', type=str, default='trainig_log' ,help="path to logging file")
-parser.add_argument('--no_mean', type=bool, default=False, help='Turn of mean shifting pre trainig' )
+parser.add_argument('--no_mean', type=int, default=0, help='Turn of mean shifting pre trainig')
 #ARGUMENTS FOR THREADS AND GAPS/INTERVAL/DISTIRBUTION FITTING----------------------------------
 parser.add_argument('--threads', '-tr ',default=1, type=int, help='number of threads for optimization')
 parser.add_argument('--fit', type=str, default='i', choices=['g', 'd', 'i'], help='fit gaps / intervals or load distribution from .npy file, defalut intervals')
@@ -96,9 +96,11 @@ data_all = data.copy()
 if not args.no_mean:
     for iter in range(number_of_tries): 
 
+        np.random.seed()
+
         # sample data for training in sample size was specfied
-        if sample_size != None :
-            sample = random.choices(data_all, k=sample_size)
+        if sample_size != None and sample_size < len(data):
+            sample = np.random.choice(data_all, size=sample_size, replace=False)
             data = sample
         
         # create args list
@@ -163,16 +165,19 @@ else :
     for iter in range(number_of_tries): 
 
         # sample data for training in sample size was specfied
-        if sample_size != None :
-            sample = random.choices(data_all, k=sample_size)
+        if sample_size != None and sample_size < len(data):
+            sample = np.random.choice(data_all, size=sample_size, replace=False)
             data = sample
 
         #number_of_states, data, bounds, options, architecture
         args_list = [(args.number_of_states, data, bounds, options, args.architecture) ] * args.threads
 
+        np.random.seed()
+
         with Pool(args.threads) as pool:
             results = pool.map(optimize_once, args_list)
-            
+
+        
         best_result = None
         best_fun = float('inf')  # Initialize to positive infinity
 
@@ -195,23 +200,24 @@ else :
 vizualize_data = data_all 
 if percent_visualize < 100:
     data_percentile = np.percentile(data_all, percent_visualize)
-    vizualize_data = data_all[data_all <= data_percentile]
+    d = np.array(data_all)
+    vizualize_data = d[d <= data_percentile]
 
 
 os.makedirs(args.output_dir, exist_ok=True)
 
-plt.hist(vizualize_data, density=True)
+plt.hist(vizualize_data, bins='auto' ,density=True)
 likelyhoods, data_likelyhoods = mch_to_likelyhood_old(overall_best_result.x , vizualize_data ,args.architecture, args.number_of_states)
 s_e = sh_entropy(data_all)
 matrix = generate_matrix(overall_best_result.x, args.architecture, args.number_of_states)
-neg_log_likelyhood = obj_func_matrix(matrix, data, args.number_of_states)
+neg_log_likelyhood = obj_func_matrix(matrix, data_all, args.number_of_states)
 plt.plot(likelyhoods, label=f"states {args.number_of_states} cross entropy: {neg_log_likelyhood:.2f} sh entropy: {s_e:.2f}")
 plt.legend()
 plt.savefig(os.path.join(args.output_dir, "data_vs_training.svg"))
 plt.close()
 
 parameters = overall_best_result.x
-cross_entropy = overall_best_result.fun
+cross_entropy = neg_log_likelyhood
 
 # Save parameters to a text file
 with open(os.path.join(args.output_dir, "trained_model.txt"), "w") as file:
@@ -233,8 +239,8 @@ data = {
 # Create a DataFrame from the dictionary
 df = pd.DataFrame(data)
 
-# Save the DataFrame to a CSV file
 df.to_csv(os.path.join(args.output_dir, "cross_entropy.csv"), index=False)
+
 
 logging.shutdown()
 

@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 55 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing input files for rule time_mem_to_csv:
+outputs/gaussian.npymetrics.txt

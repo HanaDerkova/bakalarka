@@ -1,0 +1,5 @@
+Architecture: combined
+Number of States: 2
+Parameters:
+-6.116590220076152
+-15.0

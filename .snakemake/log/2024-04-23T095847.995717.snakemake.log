@@ -1,0 +1,140 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	collect_statistics
+	260	time_mem_to_csv
+	261
+
+[Tue Apr 23 09:58:48 2024]
+rule time_mem_to_csv:
+    input: outputs/250/metrics.txt
+    output: outputs/250/metrics.csv
+    jobid: 510
+    wildcards: id=250
+
+
+[Tue Apr 23 09:58:48 2024]
+rule time_mem_to_csv:
+    input: outputs/249/metrics.txt
+    output: outputs/249/metrics.csv
+    jobid: 509
+    wildcards: id=249
+
+
+[Tue Apr 23 09:58:48 2024]
+rule time_mem_to_csv:
+    input: outputs/251/metrics.txt
+    output: outputs/251/metrics.csv
+    jobid: 511
+    wildcards: id=251
+
+
+[Tue Apr 23 09:58:48 2024]
+rule time_mem_to_csv:
+    input: outputs/256/metrics.txt
+    output: outputs/256/metrics.csv
+    jobid: 516
+    wildcards: id=256
+
+
+[Tue Apr 23 09:58:48 2024]
+rule time_mem_to_csv:
+    input: outputs/246/metrics.txt
+    output: outputs/246/metrics.csv
+    jobid: 506
+    wildcards: id=246
+
+
+[Tue Apr 23 09:58:48 2024]
+rule time_mem_to_csv:
+    input: outputs/258/metrics.txt
+    output: outputs/258/metrics.csv
+    jobid: 518
+    wildcards: id=258
+
+
+[Tue Apr 23 09:58:48 2024]
+rule time_mem_to_csv:
+    input: outputs/257/metrics.txt
+    output: outputs/257/metrics.csv
+    jobid: 517
+    wildcards: id=257
+
+
+[Tue Apr 23 09:58:48 2024]
+rule time_mem_to_csv:
+    input: outputs/259/metrics.txt
+    output: outputs/259/metrics.csv
+    jobid: 519
+    wildcards: id=259
+
+[Tue Apr 23 09:58:48 2024]
+Error in rule time_mem_to_csv:
+    jobid: 510
+    output: outputs/250/metrics.csv
+    shell:
+        python3 time_mem_to_csv.py outputs/250 -o 250 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Apr 23 09:58:48 2024]
+Error in rule time_mem_to_csv:
+    jobid: 511
+    output: outputs/251/metrics.csv
+    shell:
+        python3 time_mem_to_csv.py outputs/251 -o 251 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Apr 23 09:58:48 2024]
+Error in rule time_mem_to_csv:
+    jobid: 509
+    output: outputs/249/metrics.csv
+    shell:
+        python3 time_mem_to_csv.py outputs/249 -o 249 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Apr 23 09:58:48 2024]
+Error in rule time_mem_to_csv:
+    jobid: 516
+    output: outputs/256/metrics.csv
+    shell:
+        python3 time_mem_to_csv.py outputs/256 -o 256 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Apr 23 09:58:48 2024]
+Error in rule time_mem_to_csv:
+    jobid: 506
+    output: outputs/246/metrics.csv
+    shell:
+        python3 time_mem_to_csv.py outputs/246 -o 246 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Apr 23 09:58:48 2024]
+Error in rule time_mem_to_csv:
+    jobid: 518
+    output: outputs/258/metrics.csv
+    shell:
+        python3 time_mem_to_csv.py outputs/258 -o 258 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Apr 23 09:58:48 2024]
+Error in rule time_mem_to_csv:
+    jobid: 517
+    output: outputs/257/metrics.csv
+    shell:
+        python3 time_mem_to_csv.py outputs/257 -o 257 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Apr 23 09:58:48 2024]
+Error in rule time_mem_to_csv:
+    jobid: 519
+    output: outputs/259/metrics.csv
+    shell:
+        python3 time_mem_to_csv.py outputs/259 -o 259 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-23T095847.995717.snakemake.log

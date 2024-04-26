@@ -10,7 +10,6 @@ data_dir = config["data_file"]
 experiments = pd.read_csv(experiments_file, sep=",")
 default_target = f"{output_dir}/statistics.tsv"
 
-print(type( experiments.loc[experiments["order"] == 2, "threads"].values[0]))
 
 def f(wildcards):
     print(type( experiments.loc[experiments["order"] == int(wildcards.id), "threads"].values[0]))
@@ -41,7 +40,8 @@ rule train_model:
        histogram_viz=f"{output_dir}/{{id}}/data_vs_training.svg",
        metrics=f"{output_dir}/{{id}}/metrics.txt"
 
-   shell: f"""(/usr/bin/time -f "%e %M" python3 train_model.py {{input}} \
+   shell: 
+        f"""(/usr/bin/time -f "%e %M" python3 train_model.py {{input}} \
         -o {output_dir}/{{wildcards.id}} \
         -architecture {{params.architecture}} \
         -ns {{params.number_of_states}}  \
@@ -52,26 +52,29 @@ rule train_model:
         --training_opt {{params.number_of_tries}} {{params.sample_size}} {{params.percent_to_visualize}}   """
         f""") 2>&1 | tail -n1 > {{output.metrics}}"""
 
+rule time_mem_to_csv:
+    input : inputt=lambda w: f"{output_dir}/{w.id}/"  + 'metrics.txt'
+    output :
+        metrics=f"{output_dir}/{{id}}/metrics.csv",
+    shell :
+        f"""python3 time_mem_to_csv.py {output_dir}/{{wildcards.id}} -o {{wildcards.id}} """
+
 
 
 #TODO: check wather they concatenate correclty 
 rule collect_statistics:
    input:
        cross_entropies=expand(f"{output_dir}/{{id}}/cross_entropy.csv", id=experiments["order"].values),
-       metrics=expand(f"{output_dir}/{{id}}/metrics.txt", id=experiments["order"].values),
+       metrics=expand(f"{output_dir}/{{id}}/metrics.csv", id=experiments["order"].values),
        experiments_list=experiments_file
    output: f"{output_dir}/statistics.tsv"
    run:
        cross_entropies = pd.concat([pd.read_csv(f, sep=",") for f in input.cross_entropies])
+       final_metrics = pd.concat([pd.read_csv(f, sep=",") for f in input.metrics])
        experiments = pd.read_csv(input.experiments_list, sep=",")
        cross_entropies = cross_entropies.merge(experiments, on="order")
-
-       metrics = [open(f).read().strip() for f in input.metrics]
-       # Add time and memory metrics to the DataFrame
-       cross_entropies['time'] = [metric.split()[0] for metric in metrics]
-       cross_entropies['memory'] = [metric.split()[1] for metric in metrics]
-
-       cross_entropies.to_csv(output[0], sep="\t", index=False)
+       final_metrics =final_metrics.merge(cross_entropies, on="order")
+       final_metrics.to_csv(output[0], sep="\t", index=False)
       
       
 rule all:

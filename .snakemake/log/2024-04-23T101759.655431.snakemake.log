@@ -1,0 +1,5 @@
+Building DAG of jobs...
+InputFunctionException in line 18 of /home/hade/Desktop/bc_thesis/Snakefile:
+IndexError: index 0 is out of bounds for axis 0 with size 0
+Wildcards:
+id=3

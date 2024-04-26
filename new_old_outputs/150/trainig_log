@@ -1,0 +1,101 @@
+INFO:root:Namespace(input_file='data/gaussian.npy', output_dir='outputs/150', architecture='combined', number_of_states=36, log_f='trainig_log', no_mean=True, threads=1, fit='d', training_opt=[10, 500, 100], opt_options=[1e-06, 1e-06, 15000.0, 10.0])
+INFO:root:Best Optimization Result for iteration 0 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 2.9492509688364503
+        x: [ 7.293e+00 -8.446e+00 ...  2.952e-02  8.557e-01]
+      nit: 75
+      jac: [-2.620e-06  1.332e-07 ...  0.000e+00  0.000e+00]
+     nfev: 5964
+     njev: 84
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 1 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 2.9308215413868806
+        x: [ 4.808e+00 -7.222e+00 ...  3.746e-02  8.515e-01]
+      nit: 244
+      jac: [ 6.350e-06  5.995e-06 ... -1.332e-07  8.882e-08]
+     nfev: 18389
+     njev: 259
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 2 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 2.925077350709414
+        x: [ 4.443e+00 -7.435e+00 ...  2.952e-02  8.557e-01]
+      nit: 235
+      jac: [ 2.154e-05  6.972e-06 ...  0.000e+00  0.000e+00]
+     nfev: 18176
+     njev: 256
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 3 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 2.982150267213111
+        x: [ 3.278e+00 -7.105e+00 ...  4.795e-02  8.432e-01]
+      nit: 173
+      jac: [ 4.574e-05  3.091e-05 ...  0.000e+00  0.000e+00]
+     nfev: 13277
+     njev: 187
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 4 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0142135962103405
+        x: [ 7.596e+00 -8.778e+00 ...  2.934e-02  8.557e-01]
+      nit: 73
+      jac: [-1.288e-06  8.882e-08 ...  0.000e+00  0.000e+00]
+     nfev: 5822
+     njev: 82
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 5 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 2.925776150078395
+        x: [ 5.895e+00 -7.465e+00 ...  2.952e-02  8.557e-01]
+      nit: 71
+      jac: [-2.265e-06  1.599e-06 ...  0.000e+00  0.000e+00]
+     nfev: 5467
+     njev: 77
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 6 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0151040757517618
+        x: [ 8.091e+00 -9.194e+00 ...  3.033e-02  8.548e-01]
+      nit: 122
+      jac: [-8.438e-07  4.441e-08 ...  0.000e+00  0.000e+00]
+     nfev: 9088
+     njev: 128
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 7 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 2.9796732491901134
+        x: [ 5.092e+00 -6.222e+00 ...  2.972e-02  8.555e-01]
+      nit: 169
+      jac: [-7.816e-06  1.221e-05 ...  0.000e+00  0.000e+00]
+     nfev: 13064
+     njev: 184
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 8 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.006638098821225
+        x: [ 1.341e+01 -1.500e+01 ...  2.952e-02  8.557e-01]
+      nit: 74
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 5751
+     njev: 81
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 9 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 2.96281888632323
+        x: [ 9.110e+00 -1.044e+01 ...  2.952e-02  8.556e-01]
+      nit: 73
+      jac: [-1.776e-07  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 5893
+     njev: 83
+ hess_inv: <70x70 LbfgsInvHessProduct with dtype=float64>

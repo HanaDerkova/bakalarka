@@ -1,0 +1,147 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	22	train_model_no_mean
+	22
+
+[Sat Apr 20 11:55:20 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/77/trained_model.txt, no_m_outputs/77/cross_entropy.csv, no_m_outputs/77/data_vs_training.svg, no_m_outputs/77/metrics.txt
+    jobid: 0
+    wildcards: id=77
+
+
+[Sat Apr 20 11:55:20 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/79/trained_model.txt, no_m_outputs/79/cross_entropy.csv, no_m_outputs/79/data_vs_training.svg, no_m_outputs/79/metrics.txt
+    jobid: 1
+    wildcards: id=79
+
+
+[Sat Apr 20 11:55:20 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/82/trained_model.txt, no_m_outputs/82/cross_entropy.csv, no_m_outputs/82/data_vs_training.svg, no_m_outputs/82/metrics.txt
+    jobid: 2
+    wildcards: id=82
+
+
+[Sat Apr 20 11:55:20 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/73/trained_model.txt, no_m_outputs/73/cross_entropy.csv, no_m_outputs/73/data_vs_training.svg, no_m_outputs/73/metrics.txt
+    jobid: 3
+    wildcards: id=73
+
+
+[Sat Apr 20 11:55:20 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/74/trained_model.txt, no_m_outputs/74/cross_entropy.csv, no_m_outputs/74/data_vs_training.svg, no_m_outputs/74/metrics.txt
+    jobid: 4
+    wildcards: id=74
+
+
+[Sat Apr 20 11:55:20 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/83/trained_model.txt, no_m_outputs/83/cross_entropy.csv, no_m_outputs/83/data_vs_training.svg, no_m_outputs/83/metrics.txt
+    jobid: 5
+    wildcards: id=83
+
+
+[Sat Apr 20 11:55:20 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/71/trained_model.txt, no_m_outputs/71/cross_entropy.csv, no_m_outputs/71/data_vs_training.svg, no_m_outputs/71/metrics.txt
+    jobid: 6
+    wildcards: id=71
+
+
+[Sat Apr 20 11:55:20 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/64/trained_model.txt, no_m_outputs/64/cross_entropy.csv, no_m_outputs/64/data_vs_training.svg, no_m_outputs/64/metrics.txt
+    jobid: 7
+    wildcards: id=64
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/77/trained_model.txt
+no_m_outputs/77/cross_entropy.csv
+no_m_outputs/77/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/77/metrics.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/64/trained_model.txt
+no_m_outputs/64/cross_entropy.csv
+no_m_outputs/64/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/64/metrics.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/73/trained_model.txt
+no_m_outputs/73/cross_entropy.csv
+no_m_outputs/73/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/73/metrics.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/74/trained_model.txt
+no_m_outputs/74/cross_entropy.csv
+no_m_outputs/74/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/74/metrics.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/79/trained_model.txt
+no_m_outputs/79/cross_entropy.csv
+no_m_outputs/79/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/79/metrics.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/71/trained_model.txt
+no_m_outputs/71/cross_entropy.csv
+no_m_outputs/71/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/71/metrics.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/83/trained_model.txt
+no_m_outputs/83/cross_entropy.csv
+no_m_outputs/83/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/83/metrics.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/82/trained_model.txt
+no_m_outputs/82/cross_entropy.csv
+no_m_outputs/82/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/82/metrics.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-20T115519.942984.snakemake.log

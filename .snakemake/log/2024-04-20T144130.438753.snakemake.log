@@ -1,0 +1,12 @@
+Migrating .snakemake folder to new format...
+Migration complete
+Building DAG of jobs...
+InputFunctionException in rule train_model in file /home/hade/Desktop/bc_thesis/Snakefile, line 19:
+Error:
+  KeyError: 'id'
+Wildcards:
+  id=1
+Traceback:
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 34, in <lambda>
+  File "/home/hade/miniconda3/envs/hankas_environment/lib/python3.11/site-packages/pandas/core/frame.py", line 4090, in __getitem__
+  File "/home/hade/miniconda3/envs/hankas_environment/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc (rule train_model, line 21, /home/hade/Desktop/bc_thesis/Snakefile)

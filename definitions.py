@@ -236,6 +236,7 @@ def generate_full_mch(parameters, number_of_states):
         print("smthing went wrong")
 
 def optimize_once(args_list):
+  np.random.seed()
   number_of_states, data, bounds, options, architecture = args_list
   if architecture == 'full':
       initial_guess = np.random.rand((number_of_states - 1) * number_of_states)
@@ -252,6 +253,7 @@ def opt_w_initialization(args_list):
   return optimization_results
 
 def preprocessinig(args_list):
+  np.random.seed()
   number_of_states, data, bounds, options, architecture = args_list
   if architecture == 'full':
       initial_guess = np.random.rand((number_of_states - 1) * number_of_states)
@@ -260,6 +262,7 @@ def preprocessinig(args_list):
   elif architecture == "chain" or architecture == 'escape_chain':
       initial_guess = np.random.rand(number_of_states - 1)
   optimization_results = minimize(objective_function_2, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states), bounds=bounds, options=options)
+  print(optimization_results)
   return optimization_results
 
 def sh_entropy(data):

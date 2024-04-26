@@ -1,0 +1,5 @@
+Building DAG of jobs...
+InputFunctionException in line 15 of /home/hade/Desktop/bc_thesis/Snakefile:
+AttributeError: 'Wildcards' object has no attribute 'id'
+Wildcards:
+

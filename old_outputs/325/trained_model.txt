@@ -1,0 +1,8 @@
+Architecture: escape_chain
+Number of States: 6
+Parameters:
+-15.0
+-15.0
+-9.664620199102863
+-8.749418462916385
+0.6954777804199073

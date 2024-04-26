@@ -1,0 +1,36 @@
+Building DAG of jobs...
+IncompleteFilesException:
+The files below seem to be incomplete. If you are sure that certain files are not incomplete, mark them as complete with
+
+    snakemake --cleanup-metadata <filenames>
+
+To re-generate the files rerun your command with the --rerun-incomplete flag.
+Incomplete files:
+outputs/2/trained_model.txt
+outputs/2/cross_entropy.csv
+outputs/2/data_vs_training.svg
+outputs/2/metrics.txt
+outputs/14/trained_model.txt
+outputs/14/cross_entropy.csv
+outputs/14/data_vs_training.svg
+outputs/14/metrics.txt
+outputs/38/trained_model.txt
+outputs/38/cross_entropy.csv
+outputs/38/data_vs_training.svg
+outputs/38/metrics.txt
+outputs/53/trained_model.txt
+outputs/53/cross_entropy.csv
+outputs/53/data_vs_training.svg
+outputs/53/metrics.txt
+outputs/59/trained_model.txt
+outputs/59/cross_entropy.csv
+outputs/59/data_vs_training.svg
+outputs/59/metrics.txt
+outputs/62/trained_model.txt
+outputs/62/cross_entropy.csv
+outputs/62/data_vs_training.svg
+outputs/62/metrics.txt
+outputs/88/trained_model.txt
+outputs/88/cross_entropy.csv
+outputs/88/data_vs_training.svg
+outputs/88/metrics.txt

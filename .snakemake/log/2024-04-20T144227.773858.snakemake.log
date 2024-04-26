@@ -1,0 +1,746 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+all                       1
+collect_statistics        1
+train_model              92
+total                    94
+
+Select jobs to execute...
+Execute 8 jobs...
+
+[Sat Apr 20 14:42:28 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/71/trained_model.txt, outputs/71/cross_entropy.csv, outputs/71/data_vs_training.svg, outputs/71/metrics.txt
+    jobid: 72
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=71
+    resources: tmpdir=/tmp
+
+
+[Sat Apr 20 14:42:28 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/79/trained_model.txt, outputs/79/cross_entropy.csv, outputs/79/data_vs_training.svg, outputs/79/metrics.txt
+    jobid: 80
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=79
+    resources: tmpdir=/tmp
+
+
+[Sat Apr 20 14:42:28 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/85/trained_model.txt, outputs/85/cross_entropy.csv, outputs/85/data_vs_training.svg, outputs/85/metrics.txt
+    jobid: 86
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=85
+    resources: tmpdir=/tmp
+
+
+[Sat Apr 20 14:42:28 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/82/trained_model.txt, outputs/82/cross_entropy.csv, outputs/82/data_vs_training.svg, outputs/82/metrics.txt
+    jobid: 83
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=82
+    resources: tmpdir=/tmp
+
+
+[Sat Apr 20 14:42:28 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/72/trained_model.txt, outputs/72/cross_entropy.csv, outputs/72/data_vs_training.svg, outputs/72/metrics.txt
+    jobid: 73
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=72
+    resources: tmpdir=/tmp
+
+
+[Sat Apr 20 14:42:28 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/64/trained_model.txt, outputs/64/cross_entropy.csv, outputs/64/data_vs_training.svg, outputs/64/metrics.txt
+    jobid: 65
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=64
+    resources: tmpdir=/tmp
+
+
+[Sat Apr 20 14:42:28 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/70/trained_model.txt, outputs/70/cross_entropy.csv, outputs/70/data_vs_training.svg, outputs/70/metrics.txt
+    jobid: 71
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=70
+    resources: tmpdir=/tmp
+
+
+[Sat Apr 20 14:42:28 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/67/trained_model.txt, outputs/67/cross_entropy.csv, outputs/67/data_vs_training.svg, outputs/67/metrics.txt
+    jobid: 68
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=67
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:32 2024]
+Finished job 65.
+1 of 94 steps (1%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:32 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/91/trained_model.txt, outputs/91/cross_entropy.csv, outputs/91/data_vs_training.svg, outputs/91/metrics.txt
+    jobid: 92
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=91
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:32 2024]
+Finished job 72.
+2 of 94 steps (2%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:32 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/65/trained_model.txt, outputs/65/cross_entropy.csv, outputs/65/data_vs_training.svg, outputs/65/metrics.txt
+    jobid: 66
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=65
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:32 2024]
+Finished job 68.
+3 of 94 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:32 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/89/trained_model.txt, outputs/89/cross_entropy.csv, outputs/89/data_vs_training.svg, outputs/89/metrics.txt
+    jobid: 90
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=89
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:32 2024]
+Finished job 73.
+4 of 94 steps (4%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:32 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/86/trained_model.txt, outputs/86/cross_entropy.csv, outputs/86/data_vs_training.svg, outputs/86/metrics.txt
+    jobid: 87
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=86
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:32 2024]
+Finished job 80.
+5 of 94 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:32 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/92/trained_model.txt, outputs/92/cross_entropy.csv, outputs/92/data_vs_training.svg, outputs/92/metrics.txt
+    jobid: 93
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=92
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:33 2024]
+Finished job 71.
+6 of 94 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:33 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/68/trained_model.txt, outputs/68/cross_entropy.csv, outputs/68/data_vs_training.svg, outputs/68/metrics.txt
+    jobid: 69
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=68
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:33 2024]
+Finished job 83.
+7 of 94 steps (7%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:33 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/74/trained_model.txt, outputs/74/cross_entropy.csv, outputs/74/data_vs_training.svg, outputs/74/metrics.txt
+    jobid: 75
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=74
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:35 2024]
+Finished job 66.
+8 of 94 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:35 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/88/trained_model.txt, outputs/88/cross_entropy.csv, outputs/88/data_vs_training.svg, outputs/88/metrics.txt
+    jobid: 89
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=88
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:36 2024]
+Finished job 86.
+9 of 94 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:36 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/75/trained_model.txt, outputs/75/cross_entropy.csv, outputs/75/data_vs_training.svg, outputs/75/metrics.txt
+    jobid: 76
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=75
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:36 2024]
+Finished job 75.
+10 of 94 steps (11%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:36 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/66/trained_model.txt, outputs/66/cross_entropy.csv, outputs/66/data_vs_training.svg, outputs/66/metrics.txt
+    jobid: 67
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=66
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:36 2024]
+Finished job 69.
+11 of 94 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:36 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/78/trained_model.txt, outputs/78/cross_entropy.csv, outputs/78/data_vs_training.svg, outputs/78/metrics.txt
+    jobid: 79
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=78
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:38 2024]
+Finished job 87.
+12 of 94 steps (13%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:38 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/69/trained_model.txt, outputs/69/cross_entropy.csv, outputs/69/data_vs_training.svg, outputs/69/metrics.txt
+    jobid: 70
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=69
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:39 2024]
+Finished job 76.
+13 of 94 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:39 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/81/trained_model.txt, outputs/81/cross_entropy.csv, outputs/81/data_vs_training.svg, outputs/81/metrics.txt
+    jobid: 82
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=81
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:40 2024]
+Finished job 67.
+14 of 94 steps (15%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:40 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/84/trained_model.txt, outputs/84/cross_entropy.csv, outputs/84/data_vs_training.svg, outputs/84/metrics.txt
+    jobid: 85
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=84
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:40 2024]
+Finished job 79.
+15 of 94 steps (16%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:40 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/63/trained_model.txt, outputs/63/cross_entropy.csv, outputs/63/data_vs_training.svg, outputs/63/metrics.txt
+    jobid: 64
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=63
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:41 2024]
+Finished job 90.
+16 of 94 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:41 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/87/trained_model.txt, outputs/87/cross_entropy.csv, outputs/87/data_vs_training.svg, outputs/87/metrics.txt
+    jobid: 88
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=87
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:42 2024]
+Finished job 70.
+17 of 94 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:42 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/90/trained_model.txt, outputs/90/cross_entropy.csv, outputs/90/data_vs_training.svg, outputs/90/metrics.txt
+    jobid: 91
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=90
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:43 2024]
+Finished job 64.
+18 of 94 steps (19%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:43 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/77/trained_model.txt, outputs/77/cross_entropy.csv, outputs/77/data_vs_training.svg, outputs/77/metrics.txt
+    jobid: 78
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=77
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:43 2024]
+Finished job 82.
+19 of 94 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:43 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/80/trained_model.txt, outputs/80/cross_entropy.csv, outputs/80/data_vs_training.svg, outputs/80/metrics.txt
+    jobid: 81
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=80
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:44 2024]
+Finished job 92.
+20 of 94 steps (21%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:44 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/83/trained_model.txt, outputs/83/cross_entropy.csv, outputs/83/data_vs_training.svg, outputs/83/metrics.txt
+    jobid: 84
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=83
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:46 2024]
+Finished job 78.
+21 of 94 steps (22%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:46 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/73/trained_model.txt, outputs/73/cross_entropy.csv, outputs/73/data_vs_training.svg, outputs/73/metrics.txt
+    jobid: 74
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=73
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:48 2024]
+Finished job 81.
+22 of 94 steps (23%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:48 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/76/trained_model.txt, outputs/76/cross_entropy.csv, outputs/76/data_vs_training.svg, outputs/76/metrics.txt
+    jobid: 77
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=76
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:48 2024]
+Finished job 93.
+23 of 94 steps (24%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:48 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/23/trained_model.txt, outputs/23/cross_entropy.csv, outputs/23/data_vs_training.svg, outputs/23/metrics.txt
+    jobid: 24
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=23
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:49 2024]
+Finished job 74.
+24 of 94 steps (26%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:49 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/47/trained_model.txt, outputs/47/cross_entropy.csv, outputs/47/data_vs_training.svg, outputs/47/metrics.txt
+    jobid: 48
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=47
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:50 2024]
+Finished job 84.
+25 of 94 steps (27%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:50 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/35/trained_model.txt, outputs/35/cross_entropy.csv, outputs/35/data_vs_training.svg, outputs/35/metrics.txt
+    jobid: 36
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=35
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:51 2024]
+Finished job 77.
+26 of 94 steps (28%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:51 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/41/trained_model.txt, outputs/41/cross_entropy.csv, outputs/41/data_vs_training.svg, outputs/41/metrics.txt
+    jobid: 42
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=41
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:52 2024]
+Finished job 24.
+27 of 94 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:52 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/5/trained_model.txt, outputs/5/cross_entropy.csv, outputs/5/data_vs_training.svg, outputs/5/metrics.txt
+    jobid: 6
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=5
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:52 2024]
+Finished job 88.
+28 of 94 steps (30%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:52 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/29/trained_model.txt, outputs/29/cross_entropy.csv, outputs/29/data_vs_training.svg, outputs/29/metrics.txt
+    jobid: 30
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=29
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:54 2024]
+Finished job 42.
+29 of 94 steps (31%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:54 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/53/trained_model.txt, outputs/53/cross_entropy.csv, outputs/53/data_vs_training.svg, outputs/53/metrics.txt
+    jobid: 54
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=53
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:54 2024]
+Finished job 91.
+30 of 94 steps (32%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:54 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/17/trained_model.txt, outputs/17/cross_entropy.csv, outputs/17/data_vs_training.svg, outputs/17/metrics.txt
+    jobid: 18
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=17
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:55 2024]
+Finished job 6.
+31 of 94 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:55 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/11/trained_model.txt, outputs/11/cross_entropy.csv, outputs/11/data_vs_training.svg, outputs/11/metrics.txt
+    jobid: 12
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=11
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:57 2024]
+Finished job 18.
+32 of 94 steps (34%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:57 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/59/trained_model.txt, outputs/59/cross_entropy.csv, outputs/59/data_vs_training.svg, outputs/59/metrics.txt
+    jobid: 60
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=59
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:58 2024]
+Finished job 48.
+33 of 94 steps (35%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:58 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/38/trained_model.txt, outputs/38/cross_entropy.csv, outputs/38/data_vs_training.svg, outputs/38/metrics.txt
+    jobid: 39
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=38
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:58 2024]
+Finished job 12.
+34 of 94 steps (36%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:58 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/44/trained_model.txt, outputs/44/cross_entropy.csv, outputs/44/data_vs_training.svg, outputs/44/metrics.txt
+    jobid: 45
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=44
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:59 2024]
+Finished job 30.
+35 of 94 steps (37%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:59 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/20/trained_model.txt, outputs/20/cross_entropy.csv, outputs/20/data_vs_training.svg, outputs/20/metrics.txt
+    jobid: 21
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=20
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:42:59 2024]
+Finished job 36.
+36 of 94 steps (38%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:42:59 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/14/trained_model.txt, outputs/14/cross_entropy.csv, outputs/14/data_vs_training.svg, outputs/14/metrics.txt
+    jobid: 15
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=14
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:43:02 2024]
+Finished job 21.
+37 of 94 steps (39%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:43:02 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/62/trained_model.txt, outputs/62/cross_entropy.csv, outputs/62/data_vs_training.svg, outputs/62/metrics.txt
+    jobid: 63
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=62
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:43:02 2024]
+Finished job 45.
+38 of 94 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:43:02 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/2/trained_model.txt, outputs/2/cross_entropy.csv, outputs/2/data_vs_training.svg, outputs/2/metrics.txt
+    jobid: 3
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=2
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 14:43:02 2024]
+Finished job 85.
+39 of 94 steps (41%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 14:43:02 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/26/trained_model.txt, outputs/26/cross_entropy.csv, outputs/26/data_vs_training.svg, outputs/26/metrics.txt
+    jobid: 27
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=26
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Sat Apr 20 14:43:02 2024]
+Error in rule train_model:
+    jobid: 3
+    input: data/gaussian.npy
+    output: outputs/2/trained_model.txt, outputs/2/cross_entropy.csv, outputs/2/data_vs_training.svg, outputs/2/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/2         -architecture chain         -ns 4          --fit 'd'         --opt_options 1e-06 1e-06 15000 10     ) 2>&1 | tail -n1 > outputs/2/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sat Apr 20 14:43:02 2024]
+Error in rule train_model:
+    jobid: 63
+    input: data/gaussian.npy
+    output: outputs/62/trained_model.txt, outputs/62/cross_entropy.csv, outputs/62/data_vs_training.svg, outputs/62/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/62         -architecture combined         -ns 44          --fit 'd'         --opt_options 1e-06 1e-06 15000 10     ) 2>&1 | tail -n1 > outputs/62/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sat Apr 20 14:43:03 2024]
+Error in rule train_model:
+    jobid: 39
+    input: data/gaussian.npy
+    output: outputs/38/trained_model.txt, outputs/38/cross_entropy.csv, outputs/38/data_vs_training.svg, outputs/38/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/38         -architecture escape_chain         -ns 46          --fit 'd'         --opt_options 1e-06 1e-06 15000 10     ) 2>&1 | tail -n1 > outputs/38/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sat Apr 20 14:43:03 2024]
+Error in rule train_model:
+    jobid: 54
+    input: data/gaussian.npy
+    output: outputs/53/trained_model.txt, outputs/53/cross_entropy.csv, outputs/53/data_vs_training.svg, outputs/53/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/53         -architecture combined         -ns 26          --fit 'd'         --opt_options 1e-06 1e-06 15000 10     ) 2>&1 | tail -n1 > outputs/53/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sat Apr 20 14:43:03 2024]
+Error in rule train_model:
+    jobid: 89
+    input: data/bimodal.npy
+    output: outputs/88/trained_model.txt, outputs/88/cross_entropy.csv, outputs/88/data_vs_training.svg, outputs/88/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/bimodal.npy         -o outputs/88         -architecture combined         -ns 24          --fit 'd'         --opt_options 1e-06 1e-06 15000 10     ) 2>&1 | tail -n1 > outputs/88/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sat Apr 20 14:43:03 2024]
+[Sat Apr 20 14:43:03 2024]
+Error in rule train_model:
+    jobid: 15
+    input: data/gaussian.npy
+    output: outputs/14/trained_model.txt, outputs/14/cross_entropy.csv, outputs/14/data_vs_training.svg, outputs/14/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/14         -architecture chain         -ns 28          --fit 'd'         --opt_options 1e-06 1e-06 15000 10     ) 2>&1 | tail -n1 > outputs/14/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule train_model:
+    jobid: 60
+    input: data/gaussian.npy
+    output: outputs/59/trained_model.txt, outputs/59/cross_entropy.csv, outputs/59/data_vs_training.svg, outputs/59/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/59         -architecture combined         -ns 38          --fit 'd'         --opt_options 1e-06 1e-06 15000 10     ) 2>&1 | tail -n1 > outputs/59/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2024-04-20T144227.773858.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

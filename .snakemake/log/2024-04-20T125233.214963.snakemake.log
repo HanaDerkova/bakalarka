@@ -1,0 +1,6 @@
+AttributeError in line 1 of /home/hade/Desktop/bc_thesis/Snakefile:
+module 'numpy.random' has no attribute 'BitGenerator'
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 1, in <module>
+  File "/home/hade/.local/lib/python3.8/site-packages/pandas/__init__.py", line 22, in <module>
+  File "/home/hade/.local/lib/python3.8/site-packages/pandas/compat/__init__.py", line 16, in <module>
+  File "/home/hade/.local/lib/python3.8/site-packages/pandas/_typing.py", line 139, in <module>

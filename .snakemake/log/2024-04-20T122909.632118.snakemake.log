@@ -1,0 +1,3 @@
+TypeError in line 30 of /home/hade/Desktop/bc_thesis/Snakefile:
+threads() got an unexpected keyword argument 'thr'
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 30, in <module>

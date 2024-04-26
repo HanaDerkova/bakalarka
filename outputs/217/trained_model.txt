@@ -1,0 +1,6 @@
+Architecture: chain
+Number of States: 4
+Parameters:
+1.041844868677263
+1.0412872533040283
+1.0411276504141234

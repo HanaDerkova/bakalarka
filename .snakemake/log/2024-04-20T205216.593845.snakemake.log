@@ -1,0 +1,22 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+train_model        1
+total              1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 20:52:16 2024]
+localrule train_model:
+    input: data/bimodal.npy
+    output: outputs/172/trained_model.txt, outputs/172/cross_entropy.csv, outputs/172/data_vs_training.svg, outputs/172/metrics.txt
+    jobid: 0
+    reason: Missing output files: outputs/172/trained_model.txt
+    wildcards: id=172
+    resources: tmpdir=/tmp
+

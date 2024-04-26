@@ -1,0 +1,8 @@
+Building DAG of jobs...
+InputFunctionException in rule train_model in file /home/hade/Desktop/bc_thesis/Snakefile, line 19:
+Error:
+  KeyError: 'number_of_tries'
+Wildcards:
+  id=67
+Traceback:
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 25, in <lambda> (rule train_model, line 21, /home/hade/Desktop/bc_thesis/Snakefile)

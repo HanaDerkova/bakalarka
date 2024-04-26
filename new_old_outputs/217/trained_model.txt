@@ -1,0 +1,6 @@
+Architecture: chain
+Number of States: 4
+Parameters:
+0.9686322702869625
+0.9672706411534928
+0.9690501994630648

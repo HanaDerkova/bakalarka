@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+train_model        1
+total              1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Apr 20 16:45:11 2024]
+localrule train_model:
+    input: data/gaussian.npy
+    output: outputs/1/trained_model.txt, outputs/1/cross_entropy.csv, outputs/1/data_vs_training.svg, outputs/1/metrics.txt
+    jobid: 0
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: id=1
+    resources: tmpdir=/tmp
+
+[Sat Apr 20 16:45:12 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-04-20T164510.982072.snakemake.log

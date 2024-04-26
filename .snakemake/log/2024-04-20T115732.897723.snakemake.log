@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model_no_mean
+	1
+
+[Sat Apr 20 11:57:33 2024]
+rule train_model_no_mean:
+    input: data/bimodal.npy
+    output: no_m_outputs/70/trained_model.txt, no_m_outputs/70/cross_entropy.csv, no_m_outputs/70/data_vs_training.svg, no_m_outputs/70/metrics.txt
+    jobid: 0
+    wildcards: id=70
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/hade/Desktop/bc_thesis/Snakefile:
+Missing files after 5 seconds:
+no_m_outputs/70/trained_model.txt
+no_m_outputs/70/cross_entropy.csv
+no_m_outputs/70/data_vs_training.svg
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job train_model_no_mean since they might be corrupted:
+no_m_outputs/70/metrics.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-04-20T115732.897723.snakemake.log

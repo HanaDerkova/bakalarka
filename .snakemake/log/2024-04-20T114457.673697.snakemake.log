@@ -1,0 +1,5 @@
+Building DAG of jobs...
+InputFunctionException in line 49 of /home/hade/Desktop/bc_thesis/Snakefile:
+ValueError: invalid literal for int() with base 10: 'no_mean/63'
+Wildcards:
+id=no_mean/63

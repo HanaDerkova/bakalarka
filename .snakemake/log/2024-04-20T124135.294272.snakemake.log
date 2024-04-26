@@ -1,0 +1,3 @@
+TypeError in line 36 of /home/hade/Desktop/bc_thesis/Snakefile:
+threads() got an unexpected keyword argument 't'
+  File "/home/hade/Desktop/bc_thesis/Snakefile", line 36, in <module>

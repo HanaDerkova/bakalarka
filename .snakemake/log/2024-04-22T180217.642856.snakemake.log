@@ -1,0 +1,5 @@
+Building DAG of jobs...
+InputFunctionException in line 19 of /home/hade/Desktop/bc_thesis/Snakefile:
+TypeError: can only concatenate str (not "float") to str
+Wildcards:
+id=261
