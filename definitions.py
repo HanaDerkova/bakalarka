@@ -8,7 +8,7 @@ from scipy.stats import norm, entropy
 # chain -> params the slucka pravdepodobnost on each state
 # escape_chain -> params probability of escaping from each state
 # combined -> self loop = 1, transition ,
-def generate_matrix(parameters, architecture, number_of_states):
+def generate_matrix(parameters, architecture, number_of_states, k=None, l=None):
     if architecture == "chain":
         array = np.zeros((number_of_states,number_of_states))
         for i in range(number_of_states - 1):
@@ -40,6 +40,46 @@ def generate_matrix(parameters, architecture, number_of_states):
             matrix[i][i + 1] = prob_trasnition
     elif architecture == "full":
         matrix = generate_full_mch(parameters=parameters, number_of_states=number_of_states)
+    elif architecture == "cyclic":
+        escape_state = number_of_states - 1
+        matrix = np.zeros((number_of_states,number_of_states))
+        for i in range(1, number_of_states - 2):
+            x = parameters[i]
+            prob_of_self_looping = np.exp(x) / (np.exp(x) + np.exp(0))
+            matrix[i][i] = prob_of_self_looping # set the diagonal whis is slucka to param[i]
+            matrix[i][i + 1] = np.exp(0) / (np.exp(x) + np.exp(0))
+        #do first and last state separately: davaj dost pozor ako tam mas upratane tie parametre
+        transition_prob_parameter = parameters[0]
+        escaping_prob_parameter = parameters[i + 1]
+        self_looping_parameter = 0
+        sum = np.exp(transition_prob_parameter) + np.exp(escaping_prob_parameter) + np.exp(self_looping_parameter)
+        prob_self_looping = np.exp(self_looping_parameter) / sum
+        prob_trasnition = np.exp(transition_prob_parameter) / sum
+        prob_escaping = np.exp(escaping_prob_parameter) / sum
+        matrix[0][0] = prob_self_looping
+        matrix[0][1] = prob_trasnition
+        matrix[0][escape_state] = prob_escaping
+        # last state
+        last_transient_st = number_of_states - 2
+        x = parameters[i + 2]
+        prob_of_self_looping = np.exp(x) / (np.exp(x) + np.exp(0))
+        matrix[last_transient_st][last_transient_st] = prob_of_self_looping # set the diagonal whis is slucka to param[i]
+        matrix[last_transient_st][0] = np.exp(0) / (np.exp(x) + np.exp(0))
+    elif architecture == "k-jumps":
+       matrix = np.zeros((number_of_states,number_of_states))
+       param_counter = 0
+       for i in range(number_of_states - 1):
+            if i % k != 0 or i == 0:
+                matrix[i][i + 1] = 1
+            else:
+                back_loop_param = parameters[param_counter]
+                param_counter += 1
+                forward_param = 0
+                sum = np.exp(back_loop_param) + np.exp(forward_param)
+                prob_back_loop = np.exp(back_loop_param) / sum
+                prob_forward = np.exp(forward_param) / sum
+                matrix[i][i - l] = prob_back_loop
+                matrix[i][i + 1] = prob_forward
     else:
         raise ValueError("Invalid architecture")
 
@@ -316,3 +356,16 @@ def obj_func_matrix(matrix, data, number_of_states, eps=1e-20):
     lilelyhoods, data_likelyhoods = matrix_to_likelyhood(matrix, data,number_of_states)
     negative_log_likelihood = -np.sum(np.log(np.array(data_likelyhoods) + eps)) / len(data)
     return negative_log_likelihood
+
+
+number_of_states = 10
+k = 2
+l=1
+parameters = np.random.rand( number_of_states + (number_of_states // k))
+
+matrix = generate_matrix(parameters,"k-jumps", number_of_states, k=k, l=l)
+
+output_str = np.array2string(matrix, separator=', ',suppress_small=True)
+output_str = output_str.replace('[', '').replace(']', '').replace('\n ', '\n')  # Remove brackets and space after newline
+
+print(output_str)

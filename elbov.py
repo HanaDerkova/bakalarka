@@ -12,7 +12,11 @@ titles = {
     'far_gaussian.npy': 'Gaussian big samples',
     'uniform.npy': 'Uniform',
     'bimodal.npy' : 'Bimodal',
-    'drosophila_melanogaster_genes_exons.bed' : "Drosophila"
+    'drosophila_melanogaster_genes_exons.bed' : "Drosophila",
+    'Gains_inc_chr.txt' : "Gains inc chr",
+    'H3K4me3_chr.txt' : "H3K4me3 chr",
+    "hirt_chr.txt" : "hirt chr",
+    "promoter_2k_chr_no_chrM.txt": "promoter 2k chr no chrM" 
 
 }
 
@@ -24,22 +28,30 @@ architecture_names = {
 
 outputs_dir = "outputs"
 
-def plot_cross_entropies(architecture, mean_shift):
+def plot_cross_entropies(architecture, mean_shift, best_cross_e):
     # Load the CSV file into a pandas DataFrame
     df = pd.read_csv("outputs/statistics.tsv", sep='\t')
     grouped = df.groupby(["architecture", "input_file", "no_mean", 'fit'])
     #input_files = df["input_file"].unique()
     input_files = ['gaussian.npy', "far_gaussian.npy", "bimodal.npy", "uniform.npy"]
-    input_files = ['drosophila_melanogaster_genes_exons.bed']
+    #input_files = ['drosophila_melanogaster_genes_exons.bed','Gains_inc_chr.txt', 'H3K4me3_chr.txt', "hirt_chr.txt", "promoter_2k_chr_no_chrM.txt" ]
+    # print(best_cross_e)
 
-    fig, axs = plt.subplots(2, 2, figsize=(12, 10))
+    fig, axs = plt.subplots(2, 2, figsize=(10, 8))
 
     for ax, input_file in zip(axs.flatten(), input_files):
         for name, group in grouped:
             arch, file, mean_sh, fit = name
             if file == input_file and arch == architecture and mean_sh == mean_shift:
                 group = group.dropna(subset=['cross_entropy'])  # Drop NaN values in cross_entropy column if any
-                ax.plot(group["number_of_states"], group["cross_entropy"], marker='o', linestyle='-', label=f"{architecture} - {input_file}")
+                group = group[group["number_of_states"] <= 30] 
+                ax.plot(group["number_of_states"], group["cross_entropy"], marker='o', linestyle='-', label="achieved cross entropy")
+                # Filter the DataFrame for the specific input file
+                filtered_data = best_cross[best_cross["input_file"] == input_file]
+
+                # Plotting
+                ax.plot(filtered_data["number_of_states"], filtered_data["best_cross_entropy"], linestyle='-', label="previous best")
+
                 if fit == "d":
                     data = np.load(f"data/{input_file}")
                 elif fit == 'i':
@@ -47,14 +59,37 @@ def plot_cross_entropies(architecture, mean_shift):
                 s_h = sh_entropy(data)
                 ax.axhline(y=s_h, color='red', linestyle='--', label=f"Shannon Entropy {s_h:.2f}")
                 
+                # Update statistics DataFrame
+                for idx, row in group.iterrows():
+                    input_file = row["input_file"]
+                    num_states = row["number_of_states"]
+                    cross_entropy = row["cross_entropy"]
+                    
+                    # Check if there is an existing entry for this input file and number of states
+                    existing_entry = best_cross_e[(best_cross_e["input_file"] == input_file) & (best_cross_e["number_of_states"] == num_states)]
+
+                    # If no existing entry or the new cross-entropy is lower, update the DataFrame
+                    if existing_entry.empty or cross_entropy < existing_entry["best_cross_entropy"].values[0]:
+                        if existing_entry.empty:
+                            new_row = {"input_file": input_file, "number_of_states": num_states, "best_cross_entropy": cross_entropy}
+                            best_cross_e = pd.concat([best_cross_e, pd.DataFrame([new_row])], ignore_index=True)
+                        else:
+                            best_cross_e.loc[(best_cross_e["input_file"] == input_file) & (best_cross_e["number_of_states"] == num_states), "best_cross_entropy"] = cross_entropy
+
 
         ax.set_xlabel("Number of States")
         ax.set_ylabel("Cross Entropy")
+        #ax.legend()
         ax.set_title( f"{architecture_names[architecture]} - {titles[input_file]} " )
         ax.grid(True)
         
     plt.tight_layout()
-    plt.savefig(f'pic_visualize/cross_entropy_{architecture}.svg', format='svg')
+    if mean_shift == 1:
+        plt.savefig(f'pic_visualize/cross_entropy_{architecture}.svg', format='svg')
+    else : 
+        plt.savefig(f'pic_visualize/cross_entropy_mean_sh_{architecture}.svg', format='svg')
+    
+    return best_cross_e
 
 def plot_time(architecture, mean_shift):
     # Load the CSV file into a pandas DataFrame
@@ -89,7 +124,7 @@ def plot_mem_usage(architecture, mean_shift):
     input_files = df["input_file"].unique()
     print(input_files)
 
-    fig, axs = plt.subplots(2, 3, figsize=(12, 10))
+    fig, axs = plt.subplots(2, 2, figsize=(12, 10))
 
 
     for ax, input_file in zip(axs.flatten(), input_files):
@@ -170,9 +205,9 @@ def plot_best_training(architecture, mean_shift):
     grouped = df.groupby(["architecture", "input_file", "no_mean", 'fit'])
     #input_files = df["input_file"].unique()
     input_files = ['gaussian.npy', "far_gaussian.npy", "bimodal.npy", "uniform.npy"]
-    input_files = ['drosophila_melanogaster_genes_exons.bed']
+    #input_files = ['drosophila_melanogaster_genes_exons.bed','Gains_inc_chr.txt', 'H3K4me3_chr.txt', "hirt_chr.txt", "promoter_2k_chr_no_chrM.txt" ]
 
-    fig, axs = plt.subplots(2, 2, figsize=(12, 10))
+    fig, axs = plt.subplots(2, 2, figsize=(10, 8))
 
     for ax, input_file in zip(axs.flatten(), input_files):
         for name, group in grouped:
@@ -188,26 +223,31 @@ def plot_best_training(architecture, mean_shift):
     
         
     plt.tight_layout()
-    plt.savefig(f'pic_visualize/best_trainig_{architecture}.svg', format='svg')
+    if mean_shift == 1:
+        plt.savefig(f'pic_visualize/best_trainig_{architecture}.svg', format='svg')
+    else :
+        plt.savefig(f'pic_visualize/best_trainig_mean_sh_{architecture}.svg', format='svg')
+    
 
-#plot_best_training("chain", 0)
-#plot_best_training("escape_chain", 1)
-#plot_cross_entropies("chain",0)
-#plot_time("combined", True)
-#plot_mem_usage('combined', True)
+# plot_best_training("chain", 1)
+# plot_best_training("escape_chain", 1)
+# plot_best_training("combined",1)
+# plot_best_training("combined",0)
 
-#plot_cross_entropies("chain",1)
+best_cross = pd.DataFrame(columns=["input_file", "number_of_states", "best_cross_entropy"])
+
+best_cross = plot_cross_entropies("chain", 1, best_cross)
+best_cross = plot_cross_entropies("escape_chain", 1, best_cross)
+best_cross = plot_cross_entropies("combined", 1, best_cross)
+best_cross = plot_cross_entropies("combined", 0, best_cross)
+
+
 #plot_time("chain", 1)
 #plot_mem_usage('chain', 1)
 
 #plot_cross_entropies("escape_chain",1)
-# plot_time("escape_chain", True)
-# plot_mem_usage('escape_chain', True)
-
-plot_cross_entropies("combined",0)
-plot_best_training("combined", 0)
-# plot_time("combined", False)
-# plot_mem_usage('combined', False)
 
 
+#plot_cross_entropies("combined",1)
+#plot_best_training("combined", 1)
     

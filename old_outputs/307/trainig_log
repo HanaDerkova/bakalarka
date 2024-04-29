@@ -2,100 +2,100 @@ INFO:root:Namespace(input_file='data/drosophila_melanogaster_genes_exons.bed', o
 INFO:root:Best Optimization Result for iteration 0 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.1237141085807565
-        x: [ 1.486e+01 -1.500e+01 ...  5.060e+00 -4.685e+00]
-      nit: 50
-      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
-     nfev: 4284
-     njev: 68
+      fun: 7.155519644077446
+        x: [ 1.500e+01 -1.500e+01 ...  3.872e+00 -2.608e+00]
+      nit: 36
+      jac: [-0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 4221
+     njev: 67
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 1 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.1236827422590565
-        x: [ 1.500e+01 -1.500e+01 ...  3.417e+00 -2.470e+00]
-      nit: 31
-      jac: [-8.882e-08  0.000e+00 ...  0.000e+00  0.000e+00]
-     nfev: 3087
-     njev: 49
+      fun: 7.155898899771614
+        x: [ 1.500e+01 -1.489e+01 ...  6.175e+00 -5.440e+00]
+      nit: 36
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 3402
+     njev: 54
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 2 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.1251971938042
-        x: [ 1.500e+01 -1.498e+01 ...  4.236e-01 -6.157e-02]
-      nit: 14
-      jac: [-0.000e+00  0.000e+00 ... -1.243e-06  1.155e-06]
-     nfev: 1134
-     njev: 18
+      fun: 7.156503654467022
+        x: [ 1.500e+01 -1.497e+01 ...  3.938e+00 -3.467e+00]
+      nit: 27
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 2520
+     njev: 40
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 3 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.124194614891322
-        x: [ 1.500e+01 -1.500e+01 ...  2.590e+00 -1.220e+00]
-      nit: 31
+      fun: 7.156554892534763
+        x: [ 1.496e+01 -1.493e+01 ...  4.931e+00 -3.804e+00]
+      nit: 30
       jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
-     nfev: 2268
-     njev: 36
+     nfev: 2583
+     njev: 41
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 4 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.123542528865426
-        x: [ 1.500e+01 -1.491e+01 ...  2.968e+00 -1.963e+00]
-      nit: 36
-      jac: [-0.000e+00  0.000e+00 ... -1.581e-05  1.572e-05]
-     nfev: 2898
-     njev: 46
+      fun: 7.15565480426102
+        x: [ 1.500e+01 -1.494e+01 ...  2.943e+00 -2.041e+00]
+      nit: 41
+      jac: [-0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 3528
+     njev: 56
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 5 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.122172096521199
-        x: [ 1.500e+01 -1.500e+01 ...  2.445e+00 -1.137e+00]
-      nit: 44
-      jac: [-0.000e+00  0.000e+00 ... -7.105e-07  7.994e-07]
-     nfev: 4095
-     njev: 65
+      fun: 7.155695509488952
+        x: [ 1.487e+01 -1.499e+01 ...  6.270e+00 -5.308e+00]
+      nit: 25
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 2583
+     njev: 41
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 6 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.121686712780394
-        x: [ 1.500e+01 -1.496e+01 ...  3.524e+00 -3.058e+00]
-      nit: 48
+      fun: 7.156161231777234
+        x: [ 1.486e+01 -1.494e+01 ...  4.067e+00 -2.570e+00]
+      nit: 44
       jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
-     nfev: 5670
-     njev: 90
+     nfev: 4347
+     njev: 69
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 7 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.124970546651915
-        x: [ 1.493e+01 -1.489e+01 ...  2.070e+00 -4.890e-01]
-      nit: 22
-      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
-     nfev: 1890
-     njev: 30
+      fun: 7.155602545878502
+        x: [ 1.500e+01 -1.499e+01 ...  2.589e+00 -2.121e+00]
+      nit: 32
+      jac: [-0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 2835
+     njev: 45
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 8 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.1215883847827515
-        x: [ 1.500e+01 -1.500e+01 ...  1.405e+00  3.008e-01]
-      nit: 42
-      jac: [-0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
-     nfev: 6363
-     njev: 101
+      fun: 7.155809168399994
+        x: [ 1.481e+01 -1.497e+01 ...  6.199e+00 -5.526e+00]
+      nit: 36
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 5040
+     njev: 80
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>
 INFO:root:Best Optimization Result for iteration 9 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
   success: True
    status: 0
-      fun: 7.123637636236724
-        x: [ 1.499e+01 -1.500e+01 ...  3.540e+00 -3.110e+00]
-      nit: 38
+      fun: 7.155743212189781
+        x: [ 1.497e+01 -1.489e+01 ...  4.681e+00 -3.895e+00]
+      nit: 33
       jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
-     nfev: 2961
-     njev: 47
+     nfev: 3780
+     njev: 60
  hess_inv: <62x62 LbfgsInvHessProduct with dtype=float64>

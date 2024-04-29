@@ -23,4 +23,4 @@ for ax, data, title in zip(axs.flatten(), [gaussian, far_gaussian, bimodal, unif
     ax.set_ylim(0, 0.09)  # Set the same y-axis limits for all subplots
 
 plt.tight_layout()
-plt.show()
+plt.savefig(f'pic_visualize/challenges.svg', format='svg')
