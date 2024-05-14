@@ -70,3 +70,19 @@ optional arguments:
   --k K                 k parameter for k-jumps architecture.
   --l L                 l parameter for k-jumps architecture.
 ```
+
+## Using Snakemake
+
+Snakemake is a workflow management system that enables reproducible and scalable data analyses.
+
+In this project, Snakemake is used to automate and manage the training of the Absorbing Markov Chain models on genomic annotation data.
+
+# Usage
+
+The Snakemake workflow for this project is defined in the Snakefile provided in the repository. To run the experiments defined in config_folder/expetiments.csv and collect staistic about these expetionemst in statistics.tsv, use the following command:
+
+## Demo
+
+```shell
+snakemake all
+```
