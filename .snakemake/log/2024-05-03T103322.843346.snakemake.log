@@ -1,0 +1,21 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model
+	1
+
+[Fri May  3 10:33:23 2024]
+rule train_model:
+    input: data/uniform.npy
+    output: outputs/627/trained_model.txt, outputs/627/cross_entropy.csv, outputs/627/data_vs_training.svg, outputs/627/metrics.txt
+    jobid: 0
+    wildcards: id=627
+    threads: 8
+
+[Fri May  3 10:33:26 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-05-03T103322.843346.snakemake.log

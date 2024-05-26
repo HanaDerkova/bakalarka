@@ -1,0 +1,102 @@
+INFO:root:Namespace(input_file='data/far_gaussian.npy', output_dir='outputs/958', architecture='k-jumps', number_of_states=24, log_f='trainig_log', no_mean=1, threads=1, fit='d', training_opt=[10, 500, 100], opt_options=[1e-06, 1e-06, 15000.0, 10.0], k=1, l=3)
+INFO:root:Best Optimization Result for iteration 0 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 4.236e-01  3.088e-01 ...  8.816e-01  3.408e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 1 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 4.770e-01  2.665e-01 ...  6.074e-01  6.303e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 2 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 6.188e-01  4.939e-01 ...  4.923e-01  8.783e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 3 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 4.264e-01  3.355e-02 ...  7.318e-01  6.572e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 4 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 3.852e-01  8.183e-01 ...  4.208e-01  1.404e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 5 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 7.634e-01  6.461e-01 ...  4.506e-01  8.708e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 6 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 1.664e-01  5.228e-01 ...  5.096e-01  3.429e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 7 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 3.990e-01  3.786e-01 ...  9.419e-01  9.208e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 8 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 3.879e-01  5.379e-01 ...  5.475e-01  8.934e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 9 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 4.985e-01  7.193e-02 ...  1.675e-01  2.916e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 67
+     njev: 1
+ hess_inv: <66x66 LbfgsInvHessProduct with dtype=float64>
+WARNING:matplotlib.legend:No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.

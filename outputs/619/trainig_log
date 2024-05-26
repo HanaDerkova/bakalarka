@@ -1,0 +1,101 @@
+INFO:root:Namespace(input_file='data/far_gaussian.npy', output_dir='outputs/619', architecture='full', number_of_states=6, log_f='trainig_log', no_mean=1, threads=1, fit='d', training_opt=[10, 500, 100], opt_options=[1e-06, 1e-06, 15000.0, 10.0])
+INFO:root:Best Optimization Result for iteration 0 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.4642968453707805
+        x: [ 1.500e+01 -1.500e+01 ... -1.327e+01  4.751e+00]
+      nit: 73
+      jac: [-6.528e-05  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 2704
+     njev: 104
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 1 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.051701859880836
+        x: [ 5.238e-01  5.074e-01 ...  2.632e-01  3.249e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 26
+     njev: 1
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 2 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 6.068e-01  3.833e-01 ...  3.138e-01  5.034e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 26
+     njev: 1
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 3 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 46.051701666495326
+        x: [ 9.458e-01  5.533e-01 ...  4.596e-04  1.504e-01]
+      nit: 1
+      jac: [-7.105e-07 -7.105e-07 ... -7.105e-07  1.421e-06]
+     nfev: 52
+     njev: 2
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 4 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.051701816147094
+        x: [ 7.579e-01  5.282e-01 ...  8.782e-01  1.136e-01]
+      nit: 1
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  7.105e-07]
+     nfev: 52
+     njev: 2
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 5 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 46.0516985112261
+        x: [ 8.874e-01  8.811e-01 ...  1.989e-01  6.915e-01]
+      nit: 1
+      jac: [-4.974e-06 -4.974e-06 ... -4.263e-06  3.695e-05]
+     nfev: 52
+     njev: 2
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 6 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.051701859874036
+        x: [ 4.446e-01  7.797e-01 ...  7.304e-01  5.455e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 26
+     njev: 1
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 7 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 2.562e-01  9.310e-01 ...  6.138e-01  8.815e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 26
+     njev: 1
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 8 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.051701859833145
+        x: [ 2.885e-01  3.833e-01 ...  1.005e-01  2.978e-02]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 26
+     njev: 1
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 9 :   message: CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL
+  success: True
+   status: 0
+      fun: 46.05170185988091
+        x: [ 5.087e-01  6.710e-03 ...  9.777e-02  8.085e-01]
+      nit: 0
+      jac: [ 0.000e+00  0.000e+00 ...  0.000e+00  0.000e+00]
+     nfev: 26
+     njev: 1
+ hess_inv: <25x25 LbfgsInvHessProduct with dtype=float64>

@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model
+	1
+
+[Wed May 15 08:38:30 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/900/trained_model.txt, outputs/900/cross_entropy.csv, outputs/900/data_vs_training.svg, outputs/900/metrics.txt
+    jobid: 0
+    wildcards: id=900
+    threads: 8
+
+[Wed May 15 08:38:30 2024]
+Error in rule train_model:
+    jobid: 0
+    output: outputs/900/trained_model.txt, outputs/900/cross_entropy.csv, outputs/900/data_vs_training.svg, outputs/900/metrics.txt
+    shell:
+        (/usr/bin/time -f "%e %M" python3 train_model.py data/gaussian.npy         -o outputs/900         -architecture k-jumps         -ns 2          --fit 'd'         --opt_options 1e-06 1e-06 15000 10         --no_mean 1         --threads 8          --training_opt 10 500 100         --k 1.0 --l 3.0  ) 2>&1 | tail -n1 > outputs/900/metrics.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job train_model since they might be corrupted:
+outputs/900/metrics.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/hade/Desktop/bc_thesis/.snakemake/log/2024-05-15T083829.422770.snakemake.log

@@ -1,0 +1,4 @@
+Architecture: cyclic
+Number of States: 2
+Parameters:
+0.673907696351997

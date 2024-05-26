@@ -1,0 +1,102 @@
+INFO:root:Namespace(input_file='data/uniform.npy', output_dir='outputs/1157', architecture='k-jumps', number_of_states=10, log_f='trainig_log', no_mean=1, threads=1, fit='d', training_opt=[10, 500, 100], opt_options=[1e-06, 1e-06, 15000.0, 10.0], k=1, l=7)
+INFO:root:Best Optimization Result for iteration 0 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0741201440604753
+        x: [-1.903e-02 -2.257e+00 ... -1.500e+01 -3.628e+00]
+      nit: 97
+      jac: [-1.323e-04  2.155e-04 ...  0.000e+00  6.350e-06]
+     nfev: 2667
+     njev: 127
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 1 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0842644314766083
+        x: [-3.964e-01 -2.468e+00 ... -3.061e+00 -4.093e+00]
+      nit: 71
+      jac: [-5.032e-05  7.461e-06 ...  1.332e-07  4.441e-08]
+     nfev: 2142
+     njev: 102
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 2 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0901189117307024
+        x: [-4.352e-01 -2.408e+00 ... -1.500e+01 -5.303e-01]
+      nit: 92
+      jac: [-6.812e-05 -7.758e-05 ...  0.000e+00  3.997e-07]
+     nfev: 2562
+     njev: 122
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 3 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0759827239133855
+        x: [-1.470e-01 -2.332e+00 ... -1.500e+01 -2.966e+00]
+      nit: 106
+      jac: [-8.749e-06  6.746e-05 ...  0.000e+00  3.504e-05]
+     nfev: 3087
+     njev: 147
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 4 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0741590466743722
+        x: [-2.490e-02 -2.267e+00 ... -2.508e+00 -4.636e+00]
+      nit: 89
+      jac: [ 2.931e-05 -6.635e-05 ...  4.605e-05  3.286e-06]
+     nfev: 2331
+     njev: 111
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 5 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0741163364427297
+        x: [-3.381e-03 -2.253e+00 ... -1.065e+01 -9.457e+00]
+      nit: 101
+      jac: [ 2.022e-04  4.485e-05 ...  1.061e-05  2.118e-05]
+     nfev: 2625
+     njev: 125
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 6 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0742313775575196
+        x: [-1.214e-02 -2.251e+00 ... -1.094e+01  1.323e+00]
+      nit: 84
+      jac: [-3.888e-04  3.501e-04 ...  0.000e+00  1.030e-05]
+     nfev: 2184
+     njev: 104
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 7 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.0845035932170206
+        x: [-1.753e-01 -2.331e+00 ... -5.335e+00  1.782e+00]
+      nit: 92
+      jac: [-3.642e-06  5.511e-05 ...  0.000e+00  1.332e-07]
+     nfev: 2373
+     njev: 113
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 8 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.074090570094585
+        x: [-2.078e-02 -2.262e+00 ... -2.147e+00 -5.437e+00]
+      nit: 104
+      jac: [-1.750e-05 -1.031e-04 ...  4.485e-06  1.332e-07]
+     nfev: 2856
+     njev: 136
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 9 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 3.078489059360345
+        x: [-2.102e-01 -2.360e+00 ... -1.500e+01 -3.523e+00]
+      nit: 77
+      jac: [-9.726e-06  5.373e-05 ...  0.000e+00  0.000e+00]
+     nfev: 2184
+     njev: 104
+ hess_inv: <20x20 LbfgsInvHessProduct with dtype=float64>
+WARNING:matplotlib.legend:No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.

@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	train_model
+	1
+
+[Tue May 14 12:46:31 2024]
+rule train_model:
+    input: data/gaussian.npy
+    output: outputs/900/trained_model.txt, outputs/900/cross_entropy.csv, outputs/900/data_vs_training.svg, outputs/900/metrics.txt
+    jobid: 0
+    wildcards: id=900
+    threads: 8
+
+RuleException in line 19 of /home/hade/Desktop/bc_thesis/Snakefile:
+NameError: The name 'paraml' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

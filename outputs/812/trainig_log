@@ -1,0 +1,101 @@
+INFO:root:Namespace(input_file='data/far_gaussian.npy', output_dir='outputs/812', architecture='cyclic', number_of_states=6, log_f='trainig_log', no_mean=1, threads=1, fit='d', training_opt=[10, 500, 100], opt_options=[1e-06, 1e-06, 15000.0, 10.0])
+INFO:root:Best Optimization Result for iteration 0 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.8634291644450345
+        x: [ 4.221e+00 -3.401e+00 -3.364e+00 -3.067e+00 -3.086e+00]
+      nit: 23
+      jac: [ 5.435e-03  5.800e-05  6.022e-05  8.331e-05  8.225e-05]
+     nfev: 198
+     njev: 33
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 1 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.861743226804934
+        x: [ 4.239e+00 -4.227e+00 -4.258e+00 -4.274e+00 -3.467e+00]
+      nit: 24
+      jac: [ 6.520e-03  7.061e-05  6.803e-05  6.715e-05  1.812e-04]
+     nfev: 246
+     njev: 41
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 2 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.863418126957001
+        x: [ 4.213e+00 -3.300e+00 -3.173e+00 -3.691e+00 -2.840e+00]
+      nit: 27
+      jac: [-1.474e-03  3.517e-05  3.864e-05  2.283e-05  5.835e-05]
+     nfev: 216
+     njev: 36
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 3 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.863421299081139
+        x: [ 4.215e+00 -6.715e+00 -3.746e+00 -2.656e+00 -2.752e+00]
+      nit: 27
+      jac: [-9.859e-06 -7.994e-07 -3.286e-06  3.286e-06  4.441e-07]
+     nfev: 234
+     njev: 39
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 4 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.861726688456134
+        x: [ 4.232e+00 -6.115e+00 -3.606e+00 -3.662e+00 -3.982e+00]
+      nit: 27
+      jac: [ 2.220e-06 -1.421e-06  6.839e-06  3.642e-06 -4.707e-06]
+     nfev: 240
+     njev: 40
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 5 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.863420588374437
+        x: [ 4.215e+00 -3.358e+00 -5.427e+00 -3.254e+00 -2.511e+00]
+      nit: 26
+      jac: [-1.696e-05 -6.217e-07 -3.553e-07 -4.441e-07  1.572e-05]
+     nfev: 198
+     njev: 33
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 6 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.863424268022487
+        x: [ 4.213e+00 -3.602e+00 -3.013e+00 -2.513e+00 -5.956e+00]
+      nit: 25
+      jac: [-2.335e-03 -8.704e-06 -7.372e-06 -2.043e-06 -1.954e-06]
+     nfev: 216
+     njev: 36
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 7 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.8634138191001695
+        x: [ 4.216e+00 -2.906e+00 -3.317e+00 -3.489e+00 -3.325e+00]
+      nit: 25
+      jac: [ 1.019e-04 -2.753e-06 -6.839e-06 -6.040e-06 -6.040e-06]
+     nfev: 192
+     njev: 32
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 8 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.861982506824986
+        x: [ 4.254e+00 -3.118e+00 -4.175e+00 -4.261e+00 -7.520e+00]
+      nit: 25
+      jac: [ 2.140e-02  4.643e-04  1.366e-04  1.238e-04  4.352e-06]
+     nfev: 222
+     njev: 37
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 9 :   message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+  success: True
+   status: 0
+      fun: 6.862071498227843
+        x: [ 4.258e+00 -3.137e+00 -4.590e+00 -4.149e+00 -5.287e+00]
+      nit: 25
+      jac: [ 2.522e-02  5.858e-04  1.168e-04  1.898e-04  5.684e-05]
+     nfev: 216
+     njev: 36
+ hess_inv: <5x5 LbfgsInvHessProduct with dtype=float64>

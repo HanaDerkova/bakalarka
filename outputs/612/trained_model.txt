@@ -1,0 +1,4 @@
+Architecture: full
+Number of States: 2
+Parameters:
+-3.257634985614279

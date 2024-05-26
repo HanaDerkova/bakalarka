@@ -1,0 +1,101 @@
+INFO:root:Namespace(input_file='data/far_gaussian.npy', output_dir='outputs/700', architecture='full', number_of_states=48, log_f='trainig_log', no_mean=1, threads=1, fit='d', training_opt=[10, 500, 100], opt_options=[1e-06, 1e-06, 15000.0, 10.0])
+INFO:root:Best Optimization Result for iteration 0 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.84939558421171
+        x: [-2.533e+00  4.813e+00 ...  7.663e-01  6.233e-02]
+      nit: 25
+      jac: [ 0.000e+00  0.000e+00 ... -1.412e-05  1.080e-03]
+     nfev: 61880
+     njev: 28
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 1 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.851685235658002
+        x: [ 1.994e+00  2.736e+00 ...  1.204e+00 -5.900e+00]
+      nit: 24
+      jac: [ 1.243e-06  2.931e-06 ... -8.971e-06  3.197e-06]
+     nfev: 61880
+     njev: 28
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 2 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.851589284439774
+        x: [ 1.114e+00  1.725e+00 ...  8.115e-01 -6.069e+00]
+      nit: 24
+      jac: [ 7.994e-07  3.020e-06 ... -5.178e-05  1.945e-05]
+     nfev: 61880
+     njev: 28
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 3 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.851451658770931
+        x: [ 1.592e+00  2.528e+00 ...  8.980e-01 -9.766e-01]
+      nit: 23
+      jac: [ 1.776e-07  5.329e-07 ... -7.816e-06  3.518e-04]
+     nfev: 64090
+     njev: 29
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 4 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.850877639165405
+        x: [-3.996e+00  8.298e+00 ...  5.783e-02 -4.236e+00]
+      nit: 25
+      jac: [ 0.000e+00  1.332e-06 ... -1.865e-06  1.181e-05]
+     nfev: 61880
+     njev: 28
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 5 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.850729724959615
+        x: [-6.574e-01  1.347e+01 ...  7.242e-01 -1.930e+00]
+      nit: 25
+      jac: [-8.882e-08 -6.297e-05 ... -3.642e-06  1.006e-04]
+     nfev: 61880
+     njev: 28
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 6 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.850829387231847
+        x: [-1.431e+00  7.424e+00 ...  4.704e-01 -1.308e+00]
+      nit: 25
+      jac: [ 0.000e+00  2.665e-07 ... -7.105e-06  3.841e-04]
+     nfev: 61880
+     njev: 28
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 7 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.852209231323147
+        x: [ 2.093e+00  2.499e+00 ...  7.534e-02 -2.198e+00]
+      nit: 25
+      jac: [ 5.773e-06 -3.730e-06 ... -1.688e-06  7.194e-05]
+     nfev: 61880
+     njev: 28
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 8 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.851445824762119
+        x: [-3.037e+00  5.002e-01 ...  3.398e-01 -2.725e-01]
+      nit: 25
+      jac: [-8.882e-08 -8.882e-08 ... -5.684e-06  6.672e-04]
+     nfev: 64090
+     njev: 29
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>
+INFO:root:Best Optimization Result for iteration 9 :   message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+  success: False
+   status: 1
+      fun: 6.850321656536882
+        x: [ 3.363e+00  4.810e+00 ...  7.599e-01 -1.183e+00]
+      nit: 23
+      jac: [ 5.329e-07  1.954e-06 ... -2.753e-06  1.084e-04]
+     nfev: 64090
+     njev: 29
+ hess_inv: <2209x2209 LbfgsInvHessProduct with dtype=float64>

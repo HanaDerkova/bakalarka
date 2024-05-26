@@ -1,0 +1,6 @@
+Architecture: cyclic
+Number of States: 4
+Parameters:
+4.740812335606615
+-3.6683671158864577
+-3.6285495058548656
