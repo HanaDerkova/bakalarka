@@ -9,6 +9,7 @@ experiments_file = config["experiments_file"]
 data_dir = config["data_file"]
 experiments = pd.read_csv(experiments_file, sep=",")
 default_target = f"{output_dir}/statistics.tsv"
+num_of_threads = config["threads"]
 
 
 def f(wildcards):
@@ -30,10 +31,11 @@ rule train_model:
        max_cor = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxcor"],
        fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0],
        no_mean = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "no_mean"].values[0],
-       thr = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "threads"].values[0]
-   
-   #threads:
-         #lambda wildcards: experiments.loc[experiments["id"] == int(wildcards.id), "params_json"].values[0]
+       thr = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "threads"].values[0],
+       k = lambda wildcards: int(experiments.loc[experiments["order"] == int(wildcards.id), "k"].values[0]) if pd.notna(experiments.loc[experiments["order"] == int(wildcards.id), "k"].values[0]) else None,
+       l = lambda wildcards: int(experiments.loc[experiments["order"] == int(wildcards.id), "l"].values[0]) if pd.notna(experiments.loc[experiments["order"] == int(wildcards.id), "l"].values[0]) else None
+   threads:
+         num_of_threads
    output:
        model=f"{output_dir}/{{id}}/trained_model.txt",
        cross_entropy=f"{output_dir}/{{id}}/cross_entropy.csv",
@@ -48,8 +50,9 @@ rule train_model:
         --fit '{{params.fit}}' \
         --opt_options {{params.ftol}} {{params.gtol}} {{params.maxiter}} {{params.max_cor}} \
         --no_mean {{params.no_mean}} \
-        --threads {{params.thr}}  \
-        --training_opt {{params.number_of_tries}} {{params.sample_size}} {{params.percent_to_visualize}}   """
+        --threads {{threads}}  \
+        --training_opt {{params.number_of_tries}} {{params.sample_size}} {{params.percent_to_visualize}} \
+        --k {{params.k}} --l {{params.l}}  """
         f""") 2>&1 | tail -n1 > {{output.metrics}}"""
 
 rule time_mem_to_csv:
@@ -82,96 +85,3 @@ rule all:
    #, expand(f"{output_dir}/{{id}}/trained_model.txt", id=experiments["order"].values),
 
 
-
-
-
-# import csv
-
-# # Read configuration from CSV file
-# config = {}
-# with open("config.csv") as csvfile:
-#     reader = csv.DictReader(csvfile)
-#     for row  in reader:
-#         setup_name = str(row["order"])  # Get the setup name from the "order" column
-#         config[setup_name] = {
-#             "input_file": row["input file"],
-#             "output_file": row["output file"],
-#             "architecture": row["architecture"],
-#             "number_of_states": row["number of states"],
-#             "threads": row["threads"],
-#             "fit": row["fit"]
-#         }
-# print(config.keys())
-# #print(config[1]["input_file"])
-
-# # Define targets and rules
-# rule all:
-#     input:
-#         expand("{setup}_output/data_vs_training.svg", setup=config.keys()),
-#         expand("{setup}_output/trained_model.txt", setup=config.keys()),
-#         expand("{setup}_output/cross_entropy.npy", setup=config.keys())
-
-# rule train_model:
-#     input:
-#         input_file="data/" + config["2"]["input_file"]
-#     output:
-#         # directory("{setup}_output"),
-#         "{setup}_output/data_vs_training.svg",
-#         "{setup}_output/cross_entropy.npy",
-#         "{setup}_output/trained_model.txt"
-#     params:
-#          architecture=lambda setup: config["{setup}"]["architecture"],
-#          number_of_states=lambda setup: config["{setup}"]["number_of_states"],
-#          threads=lambda setup: config["{setup}"]["threads"],
-#          fit=lambda setup: config["{setup}"]["fit"]
-
-#     shell:
-#         """
-#         echo 'h'
-#         """
-
-#     # shell:
-#         # """
-#         # python3 train_model.py {input} \
-#         # -o {output}/ \
-#         # -architecture {params.architecture} \
-#         # -ns {params.number_of_states} \
-#         # --fit {params.fit}
-#         # """
-
-# #TODO : u still do not have threads here !!!! add them when running on the cluster
-
-# no_mean_output_dir = "no_m_outputs"
-
-# rule train_model_no_mean:
-#     input: 
-#         inputt=lambda w: f"{data_dir}/" + experiments.loc[experiments["order"] == int(w.id), "input_file"].values[0]
-#     params:
-#        architecture = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "architecture"].values[0],
-#        number_of_states = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "number_of_states"].values[0],
-#        #number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["number_of_tries"],
-#        #sample_size = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["sample_size"],
-#        #percent_to_visualize = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "train_opt_json"].values[0])["percent_to_visualize"],
-#        #number_of_tries = lambda wildcards: json.loads(experiments.loc[experiments["id"] == wildcards.id, "params_json"].values[0])["number_of_tries"],
-#        ftol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["ftol"],
-#        gtol = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["gtol"],
-#        maxiter = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxiter"],
-#        max_cor = lambda wildcards: json.loads(experiments.loc[experiments["order"] == int(wildcards.id), "params_json"].values[0])["maxcor"],
-#        fit = lambda wildcards: experiments.loc[experiments["order"] == int(wildcards.id), "fit"].values[0]
-   
-   
-#    #threads: lambda wildcards: experiments.loc[experiments["id"] == int(wildcards.id), "thread"].values[0]
-
-#     output:
-#        model=f"{no_mean_output_dir}/{{id}}/trained_model.txt",
-#        cross_entropy=f"{no_mean_output_dir}/{{id}}/cross_entropy.csv",
-#        histogram_viz=f"{no_mean_output_dir}/{{id}}/data_vs_training.svg",
-#        metrics=f"{no_mean_output_dir}/{{id}}/metrics.txt"
-
-#     shell: f"""(/usr/bin/time -f "%e %M" python3 no_mean_training.py {{input}} \
-#         -o {output_dir}/no_mean/{{wildcards.id}} \
-#         -architecture {{params.architecture}} \
-#         -ns {{params.number_of_states}}  \
-#         --fit '{{params.fit}}' \
-#         --opt_options {{params.ftol}} {{params.gtol}} {{params.maxiter}} {{params.max_cor}}     """
-#         f""") 2>&1 | tail -n1 > {{output.metrics}}"""

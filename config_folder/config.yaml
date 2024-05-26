@@ -1,3 +1,4 @@
 output_directory: outputs
 experiments_file: config_folder/experiments.csv
 data_file : data
+threads : 20

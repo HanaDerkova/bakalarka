@@ -49,19 +49,24 @@ def generate_matrix(parameters, architecture, number_of_states, k=None, l=None):
             matrix[i][i] = prob_of_self_looping # set the diagonal whis is slucka to param[i]
             matrix[i][i + 1] = np.exp(0) / (np.exp(x) + np.exp(0))
         #do first and last state separately: davaj dost pozor ako tam mas upratane tie parametre
+        i = number_of_states - 3
+        # transition_prob_parameter = parameters[0]
+        # escaping_prob_parameter = parameters[i + 1]
+        # self_looping_parameter = 0
         transition_prob_parameter = parameters[0]
-        escaping_prob_parameter = parameters[i + 1]
-        self_looping_parameter = 0
-        sum = np.exp(transition_prob_parameter) + np.exp(escaping_prob_parameter) + np.exp(self_looping_parameter)
-        prob_self_looping = np.exp(self_looping_parameter) / sum
+        escaping_prob_parameter = 0
+        #sum = np.exp(transition_prob_parameter) + np.exp(escaping_prob_parameter) + np.exp(self_looping_parameter)
+        sum = np.exp(transition_prob_parameter) + np.exp(escaping_prob_parameter)
+        #prob_self_looping = np.exp(self_looping_parameter) / sum
         prob_trasnition = np.exp(transition_prob_parameter) / sum
         prob_escaping = np.exp(escaping_prob_parameter) / sum
-        matrix[0][0] = prob_self_looping
+        #matrix[0][0] = prob_self_looping
         matrix[0][1] = prob_trasnition
         matrix[0][escape_state] = prob_escaping
         # last state
         last_transient_st = number_of_states - 2
-        x = parameters[i + 2]
+        #x = parameters[i + 2]
+        x = parameters[i+1]
         prob_of_self_looping = np.exp(x) / (np.exp(x) + np.exp(0))
         matrix[last_transient_st][last_transient_st] = prob_of_self_looping # set the diagonal whis is slucka to param[i]
         matrix[last_transient_st][0] = np.exp(0) / (np.exp(x) + np.exp(0))
@@ -69,17 +74,34 @@ def generate_matrix(parameters, architecture, number_of_states, k=None, l=None):
        matrix = np.zeros((number_of_states,number_of_states))
        param_counter = 0
        for i in range(number_of_states - 1):
-            if i % k != 0 or i == 0:
-                matrix[i][i + 1] = 1
-            else:
-                back_loop_param = parameters[param_counter]
-                param_counter += 1
-                forward_param = 0
-                sum = np.exp(back_loop_param) + np.exp(forward_param)
-                prob_back_loop = np.exp(back_loop_param) / sum
-                prob_forward = np.exp(forward_param) / sum
-                matrix[i][i - l] = prob_back_loop
-                matrix[i][i + 1] = prob_forward
+        if i % k != 0 or i == 0 or i < l :
+            transition_prob_parameter = parameters[param_counter]
+            escaping_prob_parameter = parameters[param_counter + 1]
+            self_looping_parameter = 0
+            sum = np.exp(transition_prob_parameter) + np.exp(escaping_prob_parameter) + np.exp(self_looping_parameter)
+            prob_self_looping = np.exp(self_looping_parameter) / sum
+            prob_trasnition = np.exp(transition_prob_parameter) / sum
+            prob_escaping = np.exp(escaping_prob_parameter) / sum
+            matrix[i][i] = prob_self_looping
+            matrix[i][number_of_states - 1] = prob_escaping
+            matrix[i][i + 1] = prob_trasnition
+            param_counter += 2
+        else:
+            transition_prob_parameter = parameters[param_counter]
+            escaping_prob_parameter = parameters[param_counter + 1]
+            self_looping_parameter = 0
+            back_loop_param = parameters[param_counter + 2]
+            sum = np.exp(transition_prob_parameter) + np.exp(escaping_prob_parameter) + np.exp(self_looping_parameter) + np.exp(back_loop_param)
+            prob_self_looping = np.exp(self_looping_parameter) / sum
+            prob_trasnition = np.exp(transition_prob_parameter) / sum
+            prob_escaping = np.exp(escaping_prob_parameter) / sum
+            prob_back_loop = np.exp(back_loop_param) / sum
+            matrix[i][i] = prob_self_looping
+            matrix[i][number_of_states - 1] = prob_escaping
+            matrix[i][i + 1] = prob_trasnition
+            matrix[i][i - l] = prob_back_loop
+            param_counter += 3
+       
     else:
         raise ValueError("Invalid architecture")
 
@@ -92,9 +114,9 @@ def create_vector(number_of_states):
     return vec
 
 # this has to be specific for architecture
-def mch_to_likelyhood_old(parameters, data ,architecture, number_of_states):
+def mch_to_likelyhood_old(parameters, data ,architecture, number_of_states, k=None, l=None):
     likelyhoods = [0]
-    matrix = np.array( generate_matrix(parameters, architecture, number_of_states) )
+    matrix = np.array( generate_matrix(parameters, architecture, number_of_states, k,l ) )
     #print(matrix)
     vector = np.array( create_vector(number_of_states) )
     result = vector[:] # we didd cpy here
@@ -124,8 +146,8 @@ def matrix_power(matrix, exponent, precomputed_powers):
     return result
 
 # this has to be specific for architecture
-def mch_to_likelyhood(parameters, data ,architecture, number_of_states):
-    matrix = np.array( generate_matrix(parameters, architecture, number_of_states) )
+def mch_to_likelyhood(parameters, data ,architecture, number_of_states, k=None, l=None):
+    matrix = np.array( generate_matrix(parameters, architecture, number_of_states, k, l) )
     #print(matrix)
     vector = np.array( create_vector(number_of_states) )
     vector = vector[:] # we didd cpy here
@@ -143,8 +165,8 @@ def mch_to_likelyhood(parameters, data ,architecture, number_of_states):
     return data_likelyhoods
 
 # eps <- small constant to ensure that we do not log(0)
-def objective_function(parameters, data ,architecture, number_of_states, eps=1e-20):
-    data_likelyhoods = mch_to_likelyhood(parameters, data ,architecture,number_of_states)
+def objective_function(parameters, data ,architecture, number_of_states, k=None, l=None ,eps=1e-20):
+    data_likelyhoods = mch_to_likelyhood(parameters, data ,architecture,number_of_states, k,l)
     negative_log_likelihood = -np.sum(np.log(np.array(data_likelyhoods) + eps)) / len(data)
     return negative_log_likelihood
 
@@ -202,14 +224,14 @@ def variance_number_of_steps(P):
   tsq = np.square(exp_number_of_steps)
   return (( 2 * N - identity_t) @ exp_number_of_steps - tsq)[0][0]
 
-def objective_function_2(parameters, data, architecture, number_of_states):
+def objective_function_2(parameters, data, architecture, number_of_states, k=None, l=None):
   # Calculate the mean
   mean_data = np.mean(data)
 
   # Calculate the variance
   #variance_data = np.var(data)
 
-  P = generate_matrix(parameters, architecture, number_of_states)
+  P = generate_matrix(parameters, architecture, number_of_states, k ,l)
   mean_phase_type = compute_mean(P)
 
   # # Calculate the variance
@@ -262,9 +284,10 @@ def generate_full_mch(parameters, number_of_states):
     matrix = np.zeros((number_of_states, number_of_states))
     counter = 0
     for row in range(number_of_states - 1):
-        sum = 0
+        sum = np.exp(0)
         matrix_row = np.zeros(number_of_states)
-        for column in range(number_of_states):
+        matrix_row[0] = np.exp(0)
+        for column in range(1, number_of_states):
             parameter = np.exp(parameters[counter])
             sum += parameter
             matrix_row[column] = parameter
@@ -277,32 +300,38 @@ def generate_full_mch(parameters, number_of_states):
 
 def optimize_once(args_list):
   np.random.seed()
-  number_of_states, data, bounds, options, architecture = args_list
+  number_of_states, data, bounds, options, architecture, k, l = args_list
   if architecture == 'full':
-      initial_guess = np.random.rand((number_of_states - 1) * number_of_states)
+      initial_guess = np.random.rand((number_of_states - 1) * (number_of_states -1))
   elif architecture == 'combined': 
       initial_guess = np.random.rand((number_of_states - 1) * 2)
   elif architecture == "chain" or architecture == 'escape_chain':
       initial_guess = np.random.rand(number_of_states - 1)
-  optimization_results = minimize(objective_function, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states), bounds=bounds, options=options)
+  elif architecture == 'cyclic' :
+       initial_guess = np.random.rand(number_of_states -1) 
+  elif architecture == "k-jumps" :
+     initial_guess = np.random.rand((number_of_states - 1) * 2 + ((number_of_states -1 -l) // k))
+  optimization_results = minimize(objective_function, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states, k, l), bounds=bounds, options=options)
   return optimization_results
 
-def opt_w_initialization(args_list):
+def opt_w_initialization(args_list, k=None, l=None):
   number_of_states, data, bounds, options, initial_guess, architecture = args_list
-  optimization_results = minimize(objective_function, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states), bounds=bounds, options=options)
+  optimization_results = minimize(objective_function, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states, k,l), bounds=bounds, options=options)
   return optimization_results
 
-def preprocessinig(args_list):
+def preprocessinig(args_list, k=None, l=None):
   np.random.seed()
   number_of_states, data, bounds, options, architecture = args_list
   if architecture == 'full':
-      initial_guess = np.random.rand((number_of_states - 1) * number_of_states)
+      initial_guess = np.random.rand((number_of_states - 1) * (number_of_states - 1))
   elif architecture == 'combined': 
       initial_guess = np.random.rand((number_of_states - 1) * 2)
   elif architecture == "chain" or architecture == 'escape_chain':
       initial_guess = np.random.rand(number_of_states - 1)
+  elif architecture == "k-jumps" :
+     initial_guess = np.random.rand((number_of_states - 1) * 2 + ((number_of_states -1 -l) // k))
   optimization_results = minimize(objective_function_2, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states), bounds=bounds, options=options)
-  print(optimization_results)
+  #print(optimization_results)
   return optimization_results
 
 def sh_entropy(data):
@@ -358,14 +387,15 @@ def obj_func_matrix(matrix, data, number_of_states, eps=1e-20):
     return negative_log_likelihood
 
 
-number_of_states = 10
-k = 2
-l=1
-parameters = np.random.rand( number_of_states + (number_of_states // k))
+# number_of_states = 8
+# k = 1
+# l= 3
+# parameters = np.random.rand( (number_of_states - 1) * 2 + ((number_of_states -1 -l) // k) )
+# # # parameters = np.random.rand(number_of_states - 1)
 
-matrix = generate_matrix(parameters,"k-jumps", number_of_states, k=k, l=l)
+# matrix = generate_matrix(parameters,"k-jumps", number_of_states, k ,l)
 
-output_str = np.array2string(matrix, separator=', ',suppress_small=True)
-output_str = output_str.replace('[', '').replace(']', '').replace('\n ', '\n')  # Remove brackets and space after newline
+# output_str = np.array2string(matrix, separator=', ',suppress_small=True)
+# output_str = output_str.replace('[', '').replace(']', '').replace('\n ', '\n')  # Remove brackets and space after newline
 
-print(output_str)
+# print(output_str)

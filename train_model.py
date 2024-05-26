@@ -10,21 +10,44 @@ import sys
 import random
 import logging
 
-parser = argparse.ArgumentParser(description="parse arguments for training")
+# Detailed description of the program
+description = """Software tool for modeling genomic annotations: trains an Absorbing Markov Chain to model the distribution of annotation lengths from a given file.
+
+The input file should be tab-separated with three columns:
+
+    1. Chromosome name
+    2. Start of an interval
+    3. End of an interval
+
+For fitting gap lengths, the input file should be sorted. Otherwise, we recommend using Bedtools complement and then running the tool for modeling interval lengths.
+
+The tool outputs four files:
+
+    1. trained_model.txt    Specifies the architecture, number of states, and trained parameter weights.
+    2. data_vs_training.svg Displays the learned phase-type distribution and annotation distribution.
+    3. cross_entropy.csv    Contains the resulting cross-entropy values.
+    4. training_log         Logs the training process.
+"""
+
+
+parser = argparse.ArgumentParser(description=description, formatter_class=argparse.RawDescriptionHelpFormatter)
 #MANDATORY ARGUMENTS------------------------------------------------------------------------------
-parser.add_argument('input_file', type=str, help='path to input bed file')
-parser.add_argument('-o', dest='output_dir', type=str, help='path to output directory')
-parser.add_argument('-architecture', type=str ,help='specify architecture for training')
-parser.add_argument('-number_of_states','-ns', type=int, help='Number of states for Markov chain')
-parser.add_argument('-log_f', type=str, default='trainig_log' ,help="path to logging file")
-parser.add_argument('--no_mean', type=int, default=0, help='Turn of mean shifting pre trainig')
+parser.add_argument('input_file', type=str, help='Path to input bed file.')
+parser.add_argument('-o', dest='output_dir', type=str, help='Path to output directory.')
+parser.add_argument('-architecture', type=str ,help='Specify architecture for training. Available architectures: chain, escape_chain, cyclic, full, k-jumps')
+parser.add_argument('-number_of_states','-ns', type=int, help='Number of states for Markov chain.')
+parser.add_argument('-log_f', type=str, default='trainig_log' ,help="Path to logging file.")
+parser.add_argument('--no_mean', type=int, default=0, help='Turn of mean shifting pre-trainig. Defaultly set to pre-train. Options [0-False, 1-True]')
 #ARGUMENTS FOR THREADS AND GAPS/INTERVAL/DISTIRBUTION FITTING----------------------------------
-parser.add_argument('--threads', '-tr ',default=1, type=int, help='number of threads for optimization')
-parser.add_argument('--fit', type=str, default='i', choices=['g', 'd', 'i'], help='fit gaps / intervals or load distribution from .npy file, defalut intervals')
+parser.add_argument('--threads', '-tr ',default=1, type=int, help='Number of threads for optimization.')
+parser.add_argument('--fit', type=str, default='i', choices=['g', 'd', 'i'], help='Fit gaps / intervals / load distribution from .npy file. Default is intervals.')
 #TRAINING OPTIONS ARGUMENTS------------------------------------------------------------------------------------------
-parser.add_argument("--training_opt", nargs='+', type=int, help="number_of_tires, sample_size, percent_to_vizualize")
+parser.add_argument("--training_opt", nargs='+', type=int, help="Options for trainig: number_of_tires (for optimization), sample_size (for sub-sampling in case of bis sample size), percent_to_vizualize (for visualizing the final fit). Mind that arguments have to be present in this order.")
 #OPTIMIZER ARGUMENTS--------------------------------------------------------------------------------------------------------
-parser.add_argument('--opt_options', nargs='+', type=float, help='List of input arguments: ftol gtol maxiter maxcor, mind that maxiter and maxcor must be integers')
+parser.add_argument('--opt_options', nargs='+', type=float, help='List of input arguments for L-BFGS-B optimizer method: ftol, gtol, maxiter, maxcor. Mind that maxiter and maxcor must be integers and arguments have to be presentet in this order.')
+#ARGUMENTS FOR K-JUMPS ARCHITECTURE
+parser.add_argument('--k', type=int, default=None ,help="k parameter for k-jumps architecture.")
+parser.add_argument('--l', type=int, default=None ,help="l parameter for k-jumps architecture.")
 
 args = parser.parse_args()
 
@@ -66,11 +89,15 @@ elif args.fit == "d":
 
 # setting bounds for given architecture
 if args.architecture == "full" :
-    bounds = [(-15, 15) for _ in range((args.number_of_states - 1) * (args.number_of_states))]
+    bounds = [(-15, 15) for _ in range((args.number_of_states - 1) * (args.number_of_states - 1))]
 elif args.architecture == "combined":
     bounds = [(-15, 15) for _ in range((args.number_of_states - 1) * 2 )]
 elif args.architecture == "chain" or args.architecture == "escape_chain" :
     bounds = [(-15, 15) for _ in range(args.number_of_states - 1)]
+elif args.architecture == "cyclic" :
+    bounds = [(-15, 15) for _ in range(args.number_of_states - 1)]
+elif args.architecture == "k-jumps" :
+    bounds = [(-15,15) for _ in range((args.number_of_states - 1) * 2 + ((args.number_of_states -1 -args.l) // args.k))]
 
 # default options for options
 options = {'maxfun': 60000}
@@ -104,7 +131,7 @@ if not args.no_mean:
             data = sample
         
         # create args list
-        args_list = [(args.number_of_states, data, bounds, options, args.architecture )] * args.threads
+        args_list = [(args.number_of_states, data, bounds, options, args.architecture, args.k, args.l )] * args.threads
 
         # mean shifting
         with Pool(args.threads) as pool:
@@ -138,7 +165,7 @@ if not args.no_mean:
             # Append the new initialization to the list
             initial_guesses.append(initialization)
 
-        args_list = [(args.number_of_states, data, bounds, options, i , args.architecture) for i in initial_guesses]
+        args_list = [(args.number_of_states, data, bounds, options, i , args.architecture, args.k, args.l) for i in initial_guesses]
 
         with Pool(args.threads) as pool:
             results = pool.map(opt_w_initialization, args_list)
@@ -170,7 +197,7 @@ else :
             data = sample
 
         #number_of_states, data, bounds, options, architecture
-        args_list = [(args.number_of_states, data, bounds, options, args.architecture) ] * args.threads
+        args_list = [(args.number_of_states, data, bounds, options, args.architecture, args.k, args.l) ] * args.threads
 
         np.random.seed()
 
@@ -207,11 +234,12 @@ if percent_visualize < 100:
 os.makedirs(args.output_dir, exist_ok=True)
 
 plt.hist(vizualize_data, bins='auto' ,density=True)
-likelyhoods, data_likelyhoods = mch_to_likelyhood_old(overall_best_result.x , vizualize_data ,args.architecture, args.number_of_states)
+likelyhoods, data_likelyhoods = mch_to_likelyhood_old(overall_best_result.x , vizualize_data ,args.architecture, args.number_of_states, args.k, args.l)
 s_e = sh_entropy(data_all)
-matrix = generate_matrix(overall_best_result.x, args.architecture, args.number_of_states)
+matrix = generate_matrix(overall_best_result.x, args.architecture, args.number_of_states, args.k, args.l)
 neg_log_likelyhood = obj_func_matrix(matrix, data_all, args.number_of_states)
-plt.plot(likelyhoods, label=f"states {args.number_of_states} cross entropy: {neg_log_likelyhood:.2f} sh entropy: {s_e:.2f}")
+plt.step(range(1,len(likelyhoods) + 1) , likelyhoods)
+#plt.plot(likelyhoods, label=f"states {args.number_of_states} cross entropy: {neg_log_likelyhood:.2f} sh entropy: {s_e:.2f}")
 plt.legend()
 plt.savefig(os.path.join(args.output_dir, "data_vs_training.svg"))
 plt.close()
