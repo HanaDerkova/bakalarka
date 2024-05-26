@@ -39,10 +39,10 @@ parser.add_argument('-number_of_states','-ns', type=int, help='Number of states 
 parser.add_argument('-log_f', type=str, default='trainig_log' ,help="Path to logging file.")
 parser.add_argument('--no_mean', type=int, default=0, help='Turn of mean shifting pre-trainig. Defaultly set to pre-train. Options [0-False, 1-True]')
 #ARGUMENTS FOR THREADS AND GAPS/INTERVAL/DISTIRBUTION FITTING----------------------------------
-parser.add_argument('--threads', '-tr ',default=1, type=int, help='Number of threads for optimization.')
+parser.add_argument('--threads', '-tr ',default=1, type=int, help='Number of threads for optimization all of threads will be used for one iteration')
 parser.add_argument('--fit', type=str, default='i', choices=['g', 'd', 'i'], help='Fit gaps / intervals / load distribution from .npy file. Default is intervals.')
 #TRAINING OPTIONS ARGUMENTS------------------------------------------------------------------------------------------
-parser.add_argument("--training_opt", nargs='+', type=int, help="Options for trainig: number_of_tires (for optimization), sample_size (for sub-sampling in case of bis sample size), percent_to_vizualize (for visualizing the final fit). Mind that arguments have to be present in this order.")
+parser.add_argument("--training_opt", nargs='+', type=int, help="Options for trainig: number_of_iterations (for optimization), sample_size (for sub-sampling in case of bis sample size), percent_to_vizualize (for visualizing the final fit). Mind that arguments have to be present in this order.")
 #OPTIMIZER ARGUMENTS--------------------------------------------------------------------------------------------------------
 parser.add_argument('--opt_options', nargs='+', type=float, help='List of input arguments for L-BFGS-B optimizer method: ftol, gtol, maxiter, maxcor. Mind that maxiter and maxcor must be integers and arguments have to be presentet in this order.')
 #ARGUMENTS FOR K-JUMPS ARCHITECTURE

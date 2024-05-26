@@ -45,7 +45,7 @@ The tool outputs four files:
 positional arguments:
   input_file            Path to input bed file.
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -o OUTPUT_DIR         Path to output directory.
   -architecture ARCHITECTURE
@@ -57,10 +57,10 @@ optional arguments:
   --no_mean NO_MEAN     Turn of mean shifting pre-trainig. Defaultly set to pre-train. Options [0-False,
                         1-True]
   --threads THREADS, -tr  THREADS
-                        Number of threads for optimization.
+                        Number of threads for optimization (all threads will be used for one iteration)
   --fit {g,d,i}         Fit gaps / intervals / load distribution from .npy file. Default is intervals.
   --training_opt TRAINING_OPT [TRAINING_OPT ...]
-                        Options for trainig: number_of_tires (for optimization), sample_size (for sub-
+                        Options for trainig: number_of_iterations (for optimization), sample_size (for sub-
                         sampling in case of bis sample size), percent_to_vizualize (for visualizing the
                         final fit). Mind that arguments have to be present in this order.
   --opt_options OPT_OPTIONS [OPT_OPTIONS ...]
