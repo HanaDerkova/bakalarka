@@ -67,8 +67,9 @@ optional arguments:
                         List of input arguments for L-BFGS-B optimizer method: ftol, gtol, maxiter, maxcor.
                         Mind that maxiter and maxcor must be integers and arguments have to be presentet in
                         this order.
-  --k K                 k parameter for k-jumps architecture.
-  --l L                 l parameter for k-jumps architecture.
+  --k K                 k parameter for k-jumps architecture, specifing the frequency of a jump (in our
+                        experiments this was defaultly set to 1)
+  --l L                 l parameter for k-jumps architecture, specifying the lenght of a jump.
 ```
 
 ## Using Snakemake

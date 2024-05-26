@@ -28,16 +28,25 @@ def generate_matrix(parameters, architecture, number_of_states, k=None, l=None):
     elif architecture == "combined":
         matrix = np.zeros((number_of_states,number_of_states))
         for i in range(number_of_states - 1):
-            transition_prob_parameter = parameters[2*i]
-            escaping_prob_parameter = parameters[2*i + 1]
-            self_looping_parameter = 0
-            sum = np.exp(transition_prob_parameter) + np.exp(escaping_prob_parameter) + np.exp(self_looping_parameter)
-            prob_self_looping = np.exp(self_looping_parameter) / sum
-            prob_trasnition = np.exp(transition_prob_parameter) / sum
-            prob_escaping = np.exp(escaping_prob_parameter) / sum
-            matrix[i][i] = prob_self_looping
-            matrix[i][number_of_states - 1] = prob_escaping
-            matrix[i][i + 1] = prob_trasnition
+            if i != number_of_states - 2:
+                transition_prob_parameter = parameters[2*i]
+                escaping_prob_parameter = parameters[2*i + 1]
+                self_looping_parameter = 0
+                sum = np.exp(transition_prob_parameter) + np.exp(escaping_prob_parameter) + np.exp(self_looping_parameter)
+                prob_self_looping = np.exp(self_looping_parameter) / sum
+                prob_trasnition = np.exp(transition_prob_parameter) / sum
+                prob_escaping = np.exp(escaping_prob_parameter) / sum
+                matrix[i][i] = prob_self_looping
+                matrix[i][number_of_states - 1] = prob_escaping
+                matrix[i][i + 1] = prob_trasnition
+            else:
+                transition_prob_parameter = parameters[2*i]
+                self_looping_parameter = 0
+                sum = np.exp(self_looping_parameter) + np.exp(transition_prob_parameter)
+                prob_self_looping = np.exp(self_looping_parameter) / sum
+                prob_of_transitioning = np.exp(transition_prob_parameter) / sum
+                matrix[i][i] = prob_self_looping
+                matrix[i][i + 1] = prob_of_transitioning
     elif architecture == "full":
         matrix = generate_full_mch(parameters=parameters, number_of_states=number_of_states)
     elif architecture == "cyclic":
@@ -73,7 +82,7 @@ def generate_matrix(parameters, architecture, number_of_states, k=None, l=None):
     elif architecture == "k-jumps":
        matrix = np.zeros((number_of_states,number_of_states))
        param_counter = 0
-       for i in range(number_of_states - 1):
+       for i in range(number_of_states - 2):
         if i % k != 0 or i == 0 or i < l :
             transition_prob_parameter = parameters[param_counter]
             escaping_prob_parameter = parameters[param_counter + 1]
@@ -101,6 +110,26 @@ def generate_matrix(parameters, architecture, number_of_states, k=None, l=None):
             matrix[i][i + 1] = prob_trasnition
             matrix[i][i - l] = prob_back_loop
             param_counter += 3
+       if i % k != 0 or i == 0 or i < l :
+            transition_prob_parameter = parameters[param_counter]
+            self_looping_parameter = 0
+            sum = np.exp(transition_prob_parameter) + np.exp(self_looping_parameter)
+            prob_self_looping = np.exp(self_looping_parameter) / sum
+            prob_trasnition = np.exp(transition_prob_parameter) / sum
+            matrix[number_of_states - 2][number_of_states - 2] = prob_self_looping
+            matrix[number_of_states - 2][number_of_states - 1] = prob_trasnition
+       else:
+            transition_prob_parameter = parameters[param_counter]
+            self_looping_parameter = 0
+            back_loop_param = parameters[param_counter + 1]
+            sum = np.exp(transition_prob_parameter)  + np.exp(self_looping_parameter) + np.exp(back_loop_param)
+            prob_self_looping = np.exp(self_looping_parameter) / sum
+            prob_trasnition = np.exp(transition_prob_parameter) / sum
+            prob_back_loop = np.exp(back_loop_param) / sum
+            matrix[number_of_states - 2][number_of_states - 2] = prob_self_looping
+            matrix[number_of_states - 2][number_of_states - 1] = prob_trasnition
+            matrix[number_of_states - 2][number_of_states - 2 - l] = prob_back_loop
+
        
     else:
         raise ValueError("Invalid architecture")
@@ -304,32 +333,32 @@ def optimize_once(args_list):
   if architecture == 'full':
       initial_guess = np.random.rand((number_of_states - 1) * (number_of_states -1))
   elif architecture == 'combined': 
-      initial_guess = np.random.rand((number_of_states - 1) * 2)
+      initial_guess = np.random.rand((number_of_states - 1) * 2 - 1)
   elif architecture == "chain" or architecture == 'escape_chain':
       initial_guess = np.random.rand(number_of_states - 1)
   elif architecture == 'cyclic' :
        initial_guess = np.random.rand(number_of_states -1) 
   elif architecture == "k-jumps" :
-     initial_guess = np.random.rand((number_of_states - 1) * 2 + ((number_of_states -1 -l) // k))
+     initial_guess = np.random.rand((number_of_states - 1) * 2 + ((number_of_states -1 -l) // k) - 1)
   optimization_results = minimize(objective_function, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states, k, l), bounds=bounds, options=options)
   return optimization_results
 
-def opt_w_initialization(args_list, k=None, l=None):
-  number_of_states, data, bounds, options, initial_guess, architecture = args_list
+def opt_w_initialization(args_list):
+  number_of_states, data, bounds, options, initial_guess, architecture, k, l = args_list
   optimization_results = minimize(objective_function, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states, k,l), bounds=bounds, options=options)
   return optimization_results
 
-def preprocessinig(args_list, k=None, l=None):
+def preprocessinig(args_list):
   np.random.seed()
-  number_of_states, data, bounds, options, architecture = args_list
+  number_of_states, data, bounds, options, architecture, k, l = args_list
   if architecture == 'full':
       initial_guess = np.random.rand((number_of_states - 1) * (number_of_states - 1))
   elif architecture == 'combined': 
-      initial_guess = np.random.rand((number_of_states - 1) * 2)
+      initial_guess = np.random.rand((number_of_states - 1) * 2 - 1)
   elif architecture == "chain" or architecture == 'escape_chain':
       initial_guess = np.random.rand(number_of_states - 1)
   elif architecture == "k-jumps" :
-     initial_guess = np.random.rand((number_of_states - 1) * 2 + ((number_of_states -1 -l) // k))
+     initial_guess = np.random.rand((number_of_states - 1) * 2 + ((number_of_states -1 -l) // k) - 1)
   optimization_results = minimize(objective_function_2, initial_guess, method='L-BFGS-B', args=(data, architecture, number_of_states), bounds=bounds, options=options)
   #print(optimization_results)
   return optimization_results
@@ -345,7 +374,7 @@ def max_mean_bounds(number_of_states, architecture, lower, upper):
         params = np.full((number_of_states - 1), upper)
         P = generate_matrix(params, architecture, number_of_states)
     elif architecture == "combined":
-        params = np.full((number_of_states - 1) * 2, lower)
+        params = np.full((number_of_states - 1) * 2 - 1, lower)
         P = generate_matrix(params, architecture, number_of_states)
     elif architecture == "full":
         pass
@@ -390,10 +419,10 @@ def obj_func_matrix(matrix, data, number_of_states, eps=1e-20):
 # number_of_states = 8
 # k = 1
 # l= 3
-# parameters = np.random.rand( (number_of_states - 1) * 2 + ((number_of_states -1 -l) // k) )
+# parameters = np.random.rand( (number_of_states - 1) * 2 + ((number_of_states -1 -l) // k) - 1)
 # # # parameters = np.random.rand(number_of_states - 1)
 
-# matrix = generate_matrix(parameters,"k-jumps", number_of_states, k ,l)
+# matrix = generate_matrix(parameters,"k-jumps", number_of_states ,k,l)
 
 # output_str = np.array2string(matrix, separator=', ',suppress_small=True)
 # output_str = output_str.replace('[', '').replace(']', '').replace('\n ', '\n')  # Remove brackets and space after newline
