@@ -46,8 +46,8 @@ parser.add_argument("--training_opt", nargs='+', type=int, help="Options for tra
 #OPTIMIZER ARGUMENTS--------------------------------------------------------------------------------------------------------
 parser.add_argument('--opt_options', nargs='+', type=float, help='List of input arguments for L-BFGS-B optimizer method: ftol, gtol, maxiter, maxcor. Mind that maxiter and maxcor must be integers and arguments have to be presentet in this order.')
 #ARGUMENTS FOR K-JUMPS ARCHITECTURE
-parser.add_argument('--k', type=int, default=None ,help="k parameter for k-jumps architecture, specifing the frequency of a jump (in our experiments this was defaultly set to 1)")
-parser.add_argument('--l', type=int, default=None ,help="l parameter for k-jumps architecture, specifying the lenght of a jump.")
+parser.add_argument('--k', type=int, default=None ,help="k parameter has to be set for k-jumps architecture, specifing the frequency of a jump (in our experiments this was defaultly set to 1)")
+parser.add_argument('--l', type=int, default=None ,help="l parameter has to be set for k-jumps architecture, specifying the lenght of a jump.")
 
 args = parser.parse_args()
 

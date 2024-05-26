@@ -13,7 +13,7 @@ conda activate training_env
 
 ```shell
 conda activate training_env
-python3 train_model.py data/gaussian.npy -o outputs -architecture combined -ns 10 --fit 'd' --opt_options 1e-06 1e-06 15000 10 --no_mean 0 --threads 1 --training_opt 10 500 100
+python3 train_model.py data/gaussian.npy -o example_output -architecture combined -ns 10 --fit 'd' --opt_options 1e-06 1e-06 15000 10 --no_mean 0 --threads 1 --training_opt 10 500 100
 ```
 
 ## Usage
@@ -67,9 +67,9 @@ options:
                         List of input arguments for L-BFGS-B optimizer method: ftol, gtol, maxiter, maxcor.
                         Mind that maxiter and maxcor must be integers and arguments have to be presentet in
                         this order.
-  --k K                 k parameter for k-jumps architecture, specifing the frequency of a jump (in our
+  --k K                 k parameter has to be set for k-jumps architecture, specifing the frequency of a jump (in our
                         experiments this was defaultly set to 1)
-  --l L                 l parameter for k-jumps architecture, specifying the lenght of a jump.
+  --l L                 l parameter has to be set for k-jumps architecture, specifying the lenght of a jump.
 ```
 
 ## Using Snakemake
